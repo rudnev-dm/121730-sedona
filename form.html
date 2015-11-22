@@ -8,110 +8,142 @@
 
 <body>
   <header class="page-header">
-    <section class="header-menu">
-      <ul class="header-menu-list">
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
+    <div class="header-menu">
+      <ul class="header-menu__list">
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
         </li>
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
         </li>
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Блог Шерифа">Блог Шерифа</a>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link" title="Блог Шерифа">Блог Шерифа</a>
         </li>
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
         </li>
       </ul>
-    </section>
-    <section class="headline-block">
+    </div>
+
+
+
+    <div class="headline-block">
       <div class="logo-wrapper">
         <a href="index.html" title="Перейти на главную страницу">
           <img class="logo-img" src="#" width="" height="" alt="Логотип компании">
         </a>
       </div>
       <div class="headline-text-node">
-        <p class="promo-text">Оставьте свой отзыв.</p>
+        <p class="headline__promo-text">Оставьте свой отзыв.</p>
       </div>
       <div class="headline-preview">
-        <p class="headline-preview-text-node">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях!</p>
+        <p class="headline-preview__text-node">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях!</p>
       </div>
-    </section>
+    </div>
   </header>
+
+
 
   <main class="page-content">
     <form class="search-form" action="form-reference.php" method="get">
 
-      <div class="sear-form-user-data">
-        <h2 class="sear-form-headline">Представьтесь пожалуйста</h2>
+      <fieldset class="sear-form-user-data">
+        <legend class="sear-form__headline">Представьтесь пожалуйста</legend>
 
         <label for="surname">Фамилия<sup>&lowast;</sup></label>
-        <input type="text" id="surname" name="surname" placeholder="Иванов" required>
+        <input type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
 
         <label for="name">Имя<sup>&lowast;</sup></label>
         <input type="text" id="name" name="name" placeholder="Петр" required>
 
         <label for="patronymic">Фамилия<sup>&lowast;</sup></label>
         <input type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
-      </div>
+      </fieldset>
 
-      <div class="search-form-reference">
-        <h2 class="sear-form-headline">Ваше Общее впечатление:</h2>
+
+
+      <fieldset class="search-form-reference">
+        <legend class="sear-form__headline">Ваше общее впечатление:</legend>
+
         <label for="positively">Скорее положительное</label>
-        <input type="radio" id="positively" name="positively" required>
+        <input type="radio" id="positively" name="positively" required checked>
 
         <label for="negatively">Скорее отрицательное</label>
         <input type="radio" id="negatively" name="negatively" required>
-      </div>
+      </fieldset>
 
-      <div class="search-form-date-data">
-        <h2 class="sear-form-headline">Дата вашей поездки</h2>
-        <span class="input-headline">Дата приезда<sup>&lowast;</sup></span>
-        <input type="month" name="day-coming" required>
-        <span class="input-headline">Длительность пребывания<sup>&lowast;</sup></span>
-        <input type="number" name="days-duration" required>
-        <span class="input-headline">Дата отъезда<sup>&lowast;</sup></span>
-        <input type="month" name="days-departure" required>
-      </div>
+      <fieldset class="search-form-date-data">
+        <legend class="sear-form__headline">Дата вашей поездки</legend>
 
-      <div class="search-form-quantity-people">
-        <h2 class="sear-form-headline">Кол&ndash;во путешественников</h2>
-        <span class="input-headline">Кол&ndash;во путешественников<sup>&lowast;</sup></span>
-        <input type="number" name="day-coming">
-        <div class="sear-form-user-data">
-          <span search-form-people-number>№</span>
-          <label for="traveler-surname">Фамилия<sup>&lowast;</sup></label>
+        <label class="sear-form__input-headline" for="day-coming">Дата приезда<sup>&lowast;</sup></label>
+        <input type="text" id="day-coming" name="day-coming" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
+
+        <label class="sear-form__input-headline" for="days-duration">Длительность пребывания<sup>&lowast;</sup>
+          <input type="range" id="days-duration" min="1" max="31" name="days-duration">
+        </label>
+        <output name="days-duration-output">14<span>.дн</span></output>
+
+        <label class="input-headline" for="days-departure">Дата отъезда<sup>&lowast;</sup></label>
+        <input type="text" id="days-departure" name="days-departure" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
+      </fieldset>
+
+
+
+      <fieldset class="search-form-quantity-people">
+        <legend class="sear-form__headline">Кол&ndash;во путешественников</legend>
+
+        <label class="sear-form__input-headline" for="quantity-people">Кол&ndash;во путешественников<sup>&lowast;</sup>
+          <input type="range" id="quantity-people" min="1" max="6" name="quantity-people">
+        </label>
+        <output name="quantity-people-output">2<span>.чел</span></output>
+
+        <div class="searh-form-user-data">
+          <span class="search-form__people-number">№</span>
+
+          <label for="traveler-surname"><span class="people-number-counter">1</span>Фамилия<sup>&lowast;</sup></label>
           <input type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+
           <label for="traveler-name">Имя<sup>&lowast;</sup></label>
           <input type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
+
           <label for="traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
           <input type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
         </div>
+
         <div class="sear-form-user-data">
-          <span search-form-people-number>№</span>
-          <label for="second-traveler-surname">Фамилия<sup>&lowast;</sup></label>
+          <span class="search-form__people-number">№</span>
+
+          <label for="second-traveler-surname"><span class="people-number-counter">2</span>Фамилия<sup>&lowast;</sup></label>
           <input type="text" id="second-traveler-surname" name="second-traveler-surname" placeholder="Иванов" required>
+
           <label for="second-traveler-name">Имя<sup>&lowast;</sup></label>
           <input type="text" id="second-traveler-name" name="second-traveler-name" placeholder="Петр" required>
+
           <label for="second-traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
           <input type="text" id="second-traveler-patronymic" name="second-traveler-patronymic" placeholder="Александрович" required>
         </div>
-      </div>
+      </fieldset>
 
-      <div class="search-form-places-data">
-        <h2 class="sear-form-headline">Посещенные достопримечательности:</h2>
-        <label for="devil's Bridge">Мост Дьявола</label>
-        <input type="checkbox" id="devil's Bridge" name="devil's Bridge" required>
+
+
+      <fieldset class="search-form-places-data">
+        <legend class="sear-form__headline">Посещенные достопримечательности:</legend>
+
+        <label for="devil's-bridge">Мост Дьявола</label>
+        <input type="checkbox" id="devil's-bridge" name="devil's-bridge" required checked>
+
         <label for="slide-park">Слайд&ndash;парк</label>
         <input type="checkbox" id="slide-park" name="slide-park" required>
-        <label for="mountain-bell">Гора&ndash;колокол</label>
-        <input type="checkbox" id="mountain-bell" name="mountain-bell" required>
-        <label for="red-rocks">Красные скалы</label>
-        <input type="checkbox" id="red-rocks" name="red-rocks" required>
-      </div>
 
-      <div class="search-form-upload">
-        <h2 class="sear-form-headline">Выбрать фотографии</h2>
+        <label for="mountain-bell">Гора&ndash;колокол</label>
+        <input type="checkbox" id="mountain-bell" name="mountain-bell" required checked>
+
+        <label for="red-rocks">Красные скалы</label>
+        <input type="checkbox" id="red-rocks" name="red-rocks" required checked>
+      </fieldset>
+
+      <fieldset class="search-form-upload">
+        <legend class="sear-form__headline">Выбрать фотографии</legend>
         <input type="file">
         <input type="file">
         <input type="file">
@@ -119,7 +151,7 @@
         <input type="file">
         <input type="file">
         <input type="file">
-      </div>
+      </fieldset>
 
       <div class="search-form-button-wrapper">
         <input type="submit" name="Отзыв" value="Отправить отзыв">
@@ -128,22 +160,22 @@
   </main>
 
   <footer class="page-footer">
-    <h2 class="footer-headline">#visitsedona</h2>
+    <h2 class="page-footer__headline">#visitsedona</h2>
     <div class="social-list-wrapper">
       <ul class="social-list">
-        <li class="social-list-item">
-          <a class="social-list-link" href="https://twitter.com/htmlacademy_ru" title="Мы в Твиттере">Twitter</a>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Мы в Твиттере">Twitter</a>
         </li>
-        <li class="social-list-item">
-          <a class="social-list-link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Мы в Фейсбук">Facebook</a>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Мы в Фейсбук">Facebook</a>
         </li>
-        <li class="social-list-item">
-          <a class="social-list-link" href="#" target="_blank" title="Наш канал на Ютьюбе">Youtube</a>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" target="_blank" title="Наш канал на Ютьюбе">Youtube</a>
         </li>
       </ul>
     </div>
     <div class="copyright">
-      Разработано <a class="copyright-link" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
+      Разработано <a class="copyright__link" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
     </div>
   </footer>
 
