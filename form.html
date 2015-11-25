@@ -8,19 +8,19 @@
 
 <body>
   <header class="page-header">
-    <div class="header-menu">
-      <ul class="header-menu__list">
-        <li class="header-menu__item">
-          <a href="#" class="header-menu__link" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
+    <div class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
         </li>
-        <li class="header-menu__item">
-          <a href="#" class="header-menu__link" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
+        <li class="menu__item">
+          <a href="#" class="menu__link" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
         </li>
-        <li class="header-menu__item">
-          <a href="#" class="header-menu__link" title="Блог Шерифа">Блог Шерифа</a>
+        <li class="menu__item">
+          <a href="#" class="menu__link" title="Блог Шерифа">Блог Шерифа</a>
         </li>
-        <li class="header-menu__item">
-          <a href="#" class="header-menu__link" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
+        <li class="menu__item">
+          <a href="#" class="menu__link" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
         </li>
       </ul>
     </div>
@@ -28,16 +28,16 @@
 
 
     <div class="headline-block">
-      <div class="logo-wrapper">
+      <div class="logo">
         <a href="index.html" title="Перейти на главную страницу">
           <img class="logo-img" src="#" width="" height="" alt="Логотип компании">
         </a>
       </div>
-      <div class="headline-text-node">
+      <div class="headline-text">
         <p class="headline__promo-text">Оставьте свой отзыв.</p>
       </div>
       <div class="headline-preview">
-        <p class="headline-preview__text-node">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях!</p>
+        <p class="headline-preview__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях!</p>
       </div>
     </div>
   </header>
@@ -45,105 +45,107 @@
 
 
   <main class="page-content">
-    <form class="search-form" action="form-reference.php" method="get">
+    <form class="form" action="form-reference.php" method="get">
 
-      <fieldset class="sear-form-user-data">
-        <legend class="sear-form__headline">Представьтесь пожалуйста</legend>
+      <fieldset class="form__block">
+        <legend class="form__block__title">Представьтесь пожалуйста</legend>
 
-        <label for="surname">Фамилия<sup>&lowast;</sup></label>
-        <input type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
+        <label class="form__block__input-title" for="surname">Фамилия<sup>&lowast;</sup></label>
+        <input class="form__block__input" type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
 
-        <label for="name">Имя<sup>&lowast;</sup></label>
-        <input type="text" id="name" name="name" placeholder="Петр" required>
+        <label class="form__block__input-title" for="name">Имя<sup>&lowast;</sup></label>
+        <input class="form__block__input" type="text" id="name" name="name" placeholder="Петр" required>
 
-        <label for="patronymic">Фамилия<sup>&lowast;</sup></label>
-        <input type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
+        <label class="form__block__input-title" for="patronymic">Фамилия<sup>&lowast;</sup></label>
+        <input class="form__block__input" type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
       </fieldset>
 
 
 
-      <fieldset class="search-form-reference">
-        <legend class="sear-form__headline">Ваше общее впечатление:</legend>
+      <fieldset class="form__block">
+        <legend class="form__block__title">Ваше общее впечатление:</legend>
 
-        <label for="positively">Скорее положительное</label>
-        <input type="radio" id="positively" name="positively" required checked>
+        <label class="form__block__input-title" for="positively">Скорее положительное</label>
+        <input class="form__block__input" type="radio" id="positively" name="positively" required checked>
 
-        <label for="negatively">Скорее отрицательное</label>
-        <input type="radio" id="negatively" name="negatively" required>
+        <label class="form__block__input-title" for="negatively">Скорее отрицательное</label>
+        <input class="form__block__input"type="radio" id="negatively" name="negatively" required>
       </fieldset>
 
-      <fieldset class="search-form-date-data">
-        <legend class="sear-form__headline">Дата вашей поездки</legend>
 
-        <label class="sear-form__input-headline" for="day-coming">Дата приезда<sup>&lowast;</sup></label>
+
+      <fieldset class="form__block">
+        <legend class="form__block__title">Дата вашей поездки</legend>
+
+        <label class="form__block__input-title" for="day-coming">Дата приезда<sup>&lowast;</sup></label>
         <input type="text" id="day-coming" name="day-coming" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
 
-        <label class="sear-form__input-headline" for="days-duration">Длительность пребывания<sup>&lowast;</sup>
-          <input type="range" id="days-duration" min="1" max="31" name="days-duration">
+        <label class="form__block__input-title" for="days-duration">Длительность пребывания<sup>&lowast;</sup>
+          <input class="form__block__input" type="range" id="days-duration" min="1" max="31" name="days-duration">
         </label>
         <output name="days-duration-output">14<span>.дн</span></output>
 
-        <label class="input-headline" for="days-departure">Дата отъезда<sup>&lowast;</sup></label>
-        <input type="text" id="days-departure" name="days-departure" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
+        <label class="form__block__input-title" for="days-departure">Дата отъезда<sup>&lowast;</sup></label>
+        <input class="form__block__input" type="text" id="days-departure" name="days-departure" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
       </fieldset>
 
 
 
-      <fieldset class="search-form-quantity-people">
-        <legend class="sear-form__headline">Кол&ndash;во путешественников</legend>
+      <fieldset class="form__block">
+        <legend class="form__block__title">Кол&ndash;во путешественников</legend>
 
-        <label class="sear-form__input-headline" for="quantity-people">Кол&ndash;во путешественников<sup>&lowast;</sup>
-          <input type="range" id="quantity-people" min="1" max="6" name="quantity-people">
+        <label class="form__block__input-title" for="quantity-people">Кол&ndash;во путешественников<sup>&lowast;</sup>
+          <input class="form__block__input" type="range" id="quantity-people" min="1" max="6" name="quantity-people">
         </label>
         <output name="quantity-people-output">2<span>.чел</span></output>
 
-        <div class="searh-form-user-data">
-          <span class="search-form__people-number">№</span>
+        <div class="form__block-user-data">
+          <span class="form__block__people-number">№</span>
 
-          <label for="traveler-surname"><span class="people-number-counter">1</span>Фамилия<sup>&lowast;</sup></label>
-          <input type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+          <label class="form__block__input-title" for="form__block__traveler-surname"><span class="form__block__people-counter">1</span>Фамилия<sup>&lowast;</sup></label>
+          <input class="form__block__input" type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
 
-          <label for="traveler-name">Имя<sup>&lowast;</sup></label>
-          <input type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
+          <label class="form__block__input-title" for="form__block__traveler-name">Имя<sup>&lowast;</sup></label>
+          <input class="form__block__input" type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
 
-          <label for="traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
-          <input type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+          <label class="form__block__input-title" for="form__block__traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
+          <input class="form__block__input" type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
         </div>
 
-        <div class="sear-form-user-data">
-          <span class="search-form__people-number">№</span>
+        <div class="form__block">
+          <span class="form__block__people-number">№</span>
 
-          <label for="second-traveler-surname"><span class="people-number-counter">2</span>Фамилия<sup>&lowast;</sup></label>
-          <input type="text" id="second-traveler-surname" name="second-traveler-surname" placeholder="Иванов" required>
+          <label class="form__block__input-title" for="form__block__second-traveler-surname"><span class="form__block__people-counter">2</span>Фамилия<sup>&lowast;</sup></label>
+          <input class="form__block__input" type="text" id="second-traveler-surname" name="second-traveler-surname" placeholder="Иванов" required>
 
-          <label for="second-traveler-name">Имя<sup>&lowast;</sup></label>
-          <input type="text" id="second-traveler-name" name="second-traveler-name" placeholder="Петр" required>
+          <label class="form__block__input-title" for="form__block__second-traveler-name">Имя<sup>&lowast;</sup></label>
+          <input class="form__block__input" type="text" id="second-traveler-name" name="second-traveler-name" placeholder="Петр" required>
 
-          <label for="second-traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
-          <input type="text" id="second-traveler-patronymic" name="second-traveler-patronymic" placeholder="Александрович" required>
+          <label class="form__block__input-title" for="form__block__second-traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
+          <input class="form__block__input" type="text" id="second-traveler-patronymic" name="second-traveler-patronymic" placeholder="Александрович" required>
         </div>
       </fieldset>
 
 
 
-      <fieldset class="search-form-places-data">
-        <legend class="sear-form__headline">Посещенные достопримечательности:</legend>
+      <fieldset class="form__block">
+        <legend class="form__block__title">Посещенные достопримечательности:</legend>
 
-        <label for="devil's-bridge">Мост Дьявола</label>
-        <input type="checkbox" id="devil's-bridge" name="devil's-bridge" required checked>
+        <label class="form__block__input-title" for="devil's-bridge">Мост Дьявола</label>
+        <input class="form__block__input" type="checkbox" id="devil's-bridge" name="devil's-bridge" required checked>
 
-        <label for="slide-park">Слайд&ndash;парк</label>
-        <input type="checkbox" id="slide-park" name="slide-park" required>
+        <label class="form__block__input-title" for="slide-park">Слайд&ndash;парк</label>
+        <input class="form__block__input" type="checkbox" id="slide-park" name="slide-park" required>
 
-        <label for="mountain-bell">Гора&ndash;колокол</label>
-        <input type="checkbox" id="mountain-bell" name="mountain-bell" required checked>
+        <label class="form__block__input-title" for="mountain-bell">Гора&ndash;колокол</label>
+        <input class="form__block__input" type="checkbox" id="mountain-bell" name="mountain-bell" required checked>
 
-        <label for="red-rocks">Красные скалы</label>
-        <input type="checkbox" id="red-rocks" name="red-rocks" required checked>
+        <label class="form__block__input-title" for="red-rocks">Красные скалы</label>
+        <input class="form__block__input" type="checkbox" id="red-rocks" name="red-rocks" required checked>
       </fieldset>
 
       <fieldset class="search-form-upload">
-        <legend class="sear-form__headline">Выбрать фотографии</legend>
+        <legend class="sear-form__title">Выбрать фотографии</legend>
         <input type="file">
         <input type="file">
         <input type="file">
@@ -153,14 +155,13 @@
         <input type="file">
       </fieldset>
 
-      <div class="search-form-button-wrapper">
-        <input type="submit" name="Отзыв" value="Отправить отзыв">
-      </div>
+      <input class="btn form__btn" type="submit" name="Отзыв" value="Отправить отзыв">
+
     </form>
   </main>
 
   <footer class="page-footer">
-    <h2 class="page-footer__headline">#visitsedona</h2>
+    <h2 class="page-footer__title">#visitsedona</h2>
     <div class="social-list-wrapper">
       <ul class="social-list">
         <li class="social-list__item">
