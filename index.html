@@ -9,65 +9,69 @@
 <body>
 
   <header class="page-header">
-    <section class="header-menu">
-      <ul class="header-menu-list">
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
+    <div class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
         </li>
-        <li class="header-menu-item">
-          <a href="form.html" class="header-menu-link" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
+        <li class="menu__item">
+          <a class="menu__link" href="form.html" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
         </li>
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Блог Шерифа">Блог Шерифа</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Блог Шерифа">Блог Шерифа</a>
         </li>
-        <li class="header-menu-item">
-          <a href="#" class="header-menu-link" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
         </li>
       </ul>
-    </section>
+    </div>
 
-    <section class="headline-block">
-      <div class="logo-wrapper">
+
+
+    <div class="title-block">
+      <div class="logo">
         <a href="index.html" title="Перейти на главную страницу">
-          <img class="logo-img" src="#" width="" height="" alt="Логотип компании">
+          <img class="logo__img" src="#" width="" height="" alt="Логотип компании">
         </a>
       </div>
-      <div class="headline-text-node">
-        <p class="promo-text">Седона &mdash; небольшой городок в Аризоне, зслуживающий большего!</p>
+      <div class="title-text">
+        <h1 class="title__promo">Седона &mdash; небольшой городок в Аризоне, зслуживающий большего!</h1>
       </div>
-      <div class="headline-preview">
-        <p class="headline-preview-text-node">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
+      <div class="title-preview">
+        <p class="title-preview__text">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
       </div>
-    </section>
+    </div>
   </header>
 
-  <main class="page-content">
-    <section class="features">
-      <section class="features-block">
-        <h1 class="features-block-headline">Настоящий городок</h1>
-        <p class="features-text-node">&ndash;№1&ndash;<br> Седона не атракцион для туристов, там течет своя жизнь.</p>
-      </section>
-      <section class="features-image-wrapper">
-        <img class="features-image" src="#" width="" height="" alt="Настоящий городок">
-      </section>
-      <section class="features-item">
-        <h1 class="features-item-headline">Жилье</h1>
-        <p class="features-item-text-node">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-      </section>
-      <section class="features-item">
-        <h1 class="features-item-headline">Еда</h1>
-        <p class="features-item-text-node">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-      </section>
-      <section class="features-item">
-        <h1 class="features-item-headline">Сувениры</h1>
-        <p class="features-item-text-node">Не только китайского, но и местного производства!</p>
-      </section>
-    </section>
 
-    <section class="features">
-      <div class="features-block">
-        <h1 class="features-block-headline">Там есть Мост Дьявола</h1>
-        <p class="features-text-node">&ndash;№2&ndash;
+
+  <main class="page-content">
+    <div class="features">
+      <div class="features">
+        <h2 class="features__title">Настоящий городок</h2>
+        <p class="features__text">&ndash;№1&ndash;<br> Седона не атракцион для туристов, там течет своя жизнь.</p>
+      </div>
+      <div class="features-image-wrapper">
+        <img class="features-image" src="#" width="" height="" alt="Настоящий городок">
+      </div>
+      <div class="features-item">
+        <h2 class="features-item__title">Жилье</h2>
+        <p class="features-item__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+      <div class="features-item">
+        <h2 class="features-item__title">Еда</h2>
+        <p class="features-item__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+      <div class="features-item">
+        <h2 class="features-item__title">Сувениры</h2>
+        <p class="features-item__text">Не только китайского, но и местного производства!</p>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="features">
+        <h2 class="features__title">Там есть Мост Дьявола</h2>
+        <p class="features-text__node">&ndash;№2&ndash;
           <br>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
       </div>
       <div class="features-image-wrapper">
@@ -75,49 +79,49 @@
       </div>
 
       <div class="features-item">
-        <h1 class="features-item-headline">Небольшая площаль</h1>
-        <p class="features-item-text-node">&ndash;№3&ndash;<br> Все достопримечательности находятся очень близко.</p>
+        <h2 class="features-item__title">Небольшая площаль</h2>
+        <p class="features-item__text">&ndash;№3&ndash;<br> Все достопримечательности находятся очень близко.</p>
       </div>
 
       <div class="features-item">
-        <h1 class="features-item-headline">Красивая дорога</h1>
-        <p class="features-item-text-node">&ndash;№4&ndash;<br>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <h2 class="features-item__title">Красивая дорога</h2>
+        <p class="features-item__text">&ndash;№4&ndash;<br>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </div>
       <div class="features-item">
-        <h1 class="features-item-headline">Мало туристов</h1>
-        <p class="features-item-text-node">&ndash;№5&ndash; Большинство едет в Гранд Каньон и толпится там.</p>
+        <h2 class="features-item__title">Мало туристов</h2>
+        <p class="features-item__text">&ndash;№5&ndash; Большинство едет в Гранд Каньон и толпится там.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="search-information">
-      <h1 class="search-information-headline">Заинтересовались?</h1>
-      <p class="search-information-text-node">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Cедоне.</p>
-      <div class="search-information-button-wrapper">
-        <input class="search-button" type="button" name="search-hotel" value="Найти гостиницу">
-      </div>
+    <div class="search-information">
+      <h2 class="search-information__title">Заинтересовались?</h1>
+      <p class="search-information__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Cедоне.</p>
+      <a href="#" class="btn search-btn">Найти гостиницу</a>
       <div class="search-map-wrapper">
         <!--<iframe src="" frameborder="0"></iframe>-->
       </div>
-    </section>
+    </div>
   </main>
 
+
+
   <footer class="page-footer">
-    <h2 class="hashtag-headline">#visitsedona</h2>
-    <div class="social-list-wrapper">
-      <ul class="social-list">
-        <li class="social-list-item">
-          <a class="social-list-link" href="https://twitter.com/htmlacademy_ru" title="Мы в Твиттере">Twitter</a>
+    <h2 class="page-footer__title">#visitsedona</h2>
+    <div class="social-wrapper">
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Мы в Твиттере">Twitter</a>
         </li>
-        <li class="social-list-item">
-          <a class="social-list-link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Мы в Фейсбук">Facebook</a>
+        <li class="social__item">
+          <a class="social__link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Мы в Фейсбук">Facebook</a>
         </li>
-        <li class="social-list-item">
-          <a class="social-list-link" href="#" target="_blank" title="Наш канал на Ютьюбе">Youtube</a>
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank" title="Наш канал на Ютьюбе">Youtube</a>
         </li>
       </ul>
     </div>
     <div class="copyright">
-      Разработано <a class="copyright-link" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
+      Разработано <a class="copyright__link" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
     </div>
   </footer>
 </body>
