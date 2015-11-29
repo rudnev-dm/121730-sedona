@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0 auto;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  border: none;
+}
+
+a:hove {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  font-size: 0;
+}
+
+button:focus {
+  outline: none;
+}
