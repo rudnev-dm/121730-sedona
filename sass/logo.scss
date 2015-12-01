@@ -1,0 +1,64 @@
+.logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 391px;
+  text-align: center;
+  background-image: url("../img/page-header/bg-header.png");
+  background-repeat: no-repeat;
+  z-index: -5;
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: 0px;
+    left: 0;
+    width: 160px;
+    height: 26px;
+    background-image: linear-gradient(
+      188deg,
+
+      transparent 45%,
+      white 50%
+    );
+}
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: 0px;
+    left: 160px;
+    width: 160px;
+    height: 26px;
+    background-image: linear-gradient(
+      172deg,
+
+      transparent 45%,
+      white 50%
+    );
+}
+  &__image-top {
+    align-self: center;
+    width: 196px;
+    height: 66px;
+    margin-top: 47px;
+    background-image: url("../img/page-header/bg-header--top-text.png");
+    background-repeat: no-repeat;
+  }
+  &__image-middle {
+    align-self: center;
+    width: 280px;
+    height: 48px;
+    margin-top: 60px;
+    background-image: url("../img/page-header/bg-header--middle-text.png");
+    background-repeat: no-repeat;
+  }
+  &__image-bottom {
+    align-self: center;
+    width: 197px;
+    height: 54px;
+    margin-top: 70px;
+    background-image: url("../img/page-header/bg-header--bottom-text.png");
+    background-repeat: no-repeat;
+  }
+}

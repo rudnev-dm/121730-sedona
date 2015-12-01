@@ -1,0 +1,32 @@
+.preview-item {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 37.5%;
+  }
+  &__left--home-img {
+    background-image: url(../img/page-content/features-image--home.png);
+    background-repeat: no-repeat;
+    background-position: 20px 30px;
+  }
+  &__left--food-img {
+    background-image: url(../img/page-content/features-image--food.png);
+    background-repeat: no-repeat;
+    background-position: 20px 30px;
+  }
+  &__left--surprise-img {
+    background-image: url(../img/page-content/features-image--surprise.png);
+    background-repeat: no-repeat;
+    background-position: 25px 30px;
+  }
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin: $margin--reset;
+  }
+  &:last-child {
+    margin-bottom: 35px;
+  }
+}

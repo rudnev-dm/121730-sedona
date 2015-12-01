@@ -1,0 +1,79 @@
+.preview {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #eeeeee;
+  &--border:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0px;
+    left: 0;
+    width: 160px;
+    height: 15px;
+    background-image: linear-gradient(
+      184deg,
+
+      #ffffff 45%,
+      $main-color 50%
+    );
+}
+  &--border:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0px;
+    left: 160px;
+    width: 160px;
+    height: 15px;
+    background-image: linear-gradient(
+      176deg,
+
+      #ffffff 45%,
+      $main-color 50%
+    );
+}
+  &--active {
+    background-color: $main-color;
+  }
+  &__number {
+    margin-top: 15px;
+    margin-bottom: 17px;
+    display: $display--span;
+    font-size: $font-size--text;
+    line-height: $line-height-text;
+    text-align: $text-align--text-node;
+  }
+  &__number--active {
+    color: $title-color;
+  }
+  &__title{
+    margin: $margin--reset;
+    padding-top: 35px;
+    font-size: $font-size--h2;
+    line-height: $line-height--h2;
+    text-align: $text-align--text-node;
+  }
+  &__title--active {
+    color: $title-color;
+  }
+  &__text {
+    margin: $margin--reset;
+    padding-bottom: 36px;
+    font-size: $font-size--text;
+    line-height: $line-height-text;
+    text-align: $text-align--text-node;
+  }
+  &__text--active {
+    color: $title-color;
+  }
+  &__border:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 20px;
+    width: 280px;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
+}
