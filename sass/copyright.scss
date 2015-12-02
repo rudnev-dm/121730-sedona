@@ -1,0 +1,17 @@
+.copyright {
+  display: flex;
+  justify-content: $text-align--text-node;
+  align-items: $text-align--text-node;
+  margin-bottom: 23px;
+  &__link {
+    display: block;
+    font-size: $font-size--reset;
+  }
+  &__link--logo {
+    margin-left: 11px;
+    width: 27px;
+    height: 34px;
+    background-image: url("../img/page-footer/copyright-logo.png");
+    background-repeat: no-repeat;
+  }
+}
