@@ -1,0 +1,213 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    margin: $margin--reset;
+    padding: $padding--reset;
+    border: $display-reset;
+  }
+  &__block:nth-child(1) {
+    padding-bottom: 23px;
+  }
+  &__block:nth-child(2) {
+    padding-bottom: 23px;
+  }
+  &__block:nth-child(3) {
+    padding-bottom: 23px;
+  }
+  &__block:nth-child(4) {
+    padding-bottom: 23px;
+  }
+  &__block:nth-child(5) {
+    padding-bottom: 23px;
+  }
+  &__input-number {
+    display: flex;
+    position: relative;
+  }
+  &__input-number::before {
+    @include input-reduction;
+  }
+  &__input-human-counter {
+    display: flex;
+    position: relative;
+  }
+  &__input-human-counter::before {
+    @include human-counter;
+  }
+  &__title {
+    @include form-legend;
+  }
+  &__label {
+    @include form-label;
+  }
+  &__label--width{
+    width: 72%; //Ширина полей
+    margin-left: 81px;
+  }
+  &__input-field[type="text"] {
+    padding-top: 23px;
+    padding-right: 6.25%;
+    padding-left: 6.25%;
+    padding-bottom: 21px;
+    width: 100%;
+    height: 58px;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    color: $main-color--black;
+    background-color: $main-color--gray;
+    border: $display-reset;
+  }
+  &__input-field[type="radio"] {
+    display: $display-reset;
+  }
+  &__input-field[type="radio"] + label {
+    position: relative;
+    padding-left: 22%;
+    vertical-align: top;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &__input-field[type="radio"] + label:before {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: $main-color--gray;
+    border-radius: 50%;
+  }
+  &__input-field[type="radio"]:checked + label:after {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    content: "";
+    top: 15px;
+    left: 15px;
+    background-color: $main-color-radio--light-gray;
+    border-radius: 50%;
+  }
+  &__input-field[type="date"] {
+    width: 100%;
+    height: 58px;
+    padding-left: 6.25%;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    font-weight: bold;
+    background-color: $main-color--gray;
+    border: $display-reset;
+  }
+  &__input-field[type="date"]:last-child {
+    box-shadow: inset 0 0 0 2px $input-date--border-color;
+  }
+  &__input-field[type="number"] {
+    appearance: textfield;
+    width: 100%;
+    height: 58px;
+    margin-right: 4px;
+    margin-left: 4px;
+    padding-left: 4%;
+    padding-right: 10%;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    background-color: $main-color--gray;
+    border: $display-reset;
+  }
+  &__user-data {
+    @include form-user-data--block-model;
+  }
+  &__user-data--headline {
+    display: flex;
+    width: 100%;
+    height: 58px;
+  }
+  &__people-counter {
+    @include form-people-counter;
+  }
+  &__input-field--user[type="text"] {
+    width: 100%; //Ширина полей
+    margin-left: 4px;
+  }
+  &__input-field--margin[type="text"] {
+    margin-right: 0;
+    margin-left: 64px;
+  }
+  &__people-number {
+    margin-right: 17.1%;
+    margin-left: 4px;
+  }
+  &__input-field[type="checkbox"] {
+    display: none;
+  }
+  &__input-field[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25%;
+    vertical-align: top;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &__input-field[type="checkbox"] + label:before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 56px;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: $main-color--gray;
+    border-radius: 5px 5px 5px 5px;
+  }
+  &__input-field[type="checkbox"]:checked + label::after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 18px;
+    width: 18px;
+    height: 8px;
+    border: 5px solid $main-color--black;
+    border-top-style: $display-reset;
+    border-right-style: $display-reset;
+    transform: rotate(-45deg);
+  }
+  &__block--upload {
+    position: relative;
+  }
+  &__input-field[type="file"] {
+    display: none;
+  }
+  &__input-field[type="file"] + label {
+    display: block;
+    width: 100%;
+    margin: $margin--reset;
+    margin-top: 18px;
+    padding: $padding--reset;
+    margin-bottom: 45px;
+    padding-top: 16.5px;
+    padding-bottom: 18.5px;
+    font-size: $font-size-large--button;
+    font-weight: bold;
+    line-height: $line-height--text;
+    text-align: center;
+    color: #c6c6c6;
+    background-color: $main-color--gray;
+  }
+  &__photo-upload-wrapper {
+    @include foto-upload-block;
+  }
+  &__photo-preview {
+    @include foto-preview;
+  }
+  &__photo-preview:nth-child(3n) {
+    margin-right: $margin--reset;
+  }
+  @include delete-file-button;
+}

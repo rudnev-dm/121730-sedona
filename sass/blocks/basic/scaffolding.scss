@@ -3,8 +3,6 @@
 }
 
 body {
-  width: 320px;
-  margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -26,6 +24,17 @@ img {
   outline: none;
 }
 
-button:focus {
-  outline: none;
+
+input[type="text"]::-moz-placeholder {
+  color: #000;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #000;
+  font-weight: bold;
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-width: 320px;
 }

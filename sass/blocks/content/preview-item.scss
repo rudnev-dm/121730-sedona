@@ -1,32 +1,36 @@
 .preview-item {
   display: flex;
-  justify-content: space-between;
   &__left {
-    width: 37.5%;
+    width: 40%;
   }
   &__left--home-img {
     background-image: url(../img/page-content/features-image--home.png);
     background-repeat: no-repeat;
-    background-position: 20px 30px;
+    background-position: center 20px; //20px 30px
   }
   &__left--food-img {
     background-image: url(../img/page-content/features-image--food.png);
     background-repeat: no-repeat;
-    background-position: 20px 30px;
+    background-position: center 20px; //20px 30px
   }
   &__left--surprise-img {
     background-image: url(../img/page-content/features-image--surprise.png);
     background-repeat: no-repeat;
-    background-position: 25px 30px;
+    background-position: center 15px; //25px 30px
   }
   &__title {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    margin-top: 29px;
+    margin-bottom: 21px;
   }
   &__text {
     margin: $margin--reset;
+    font-size: $font-size-medium--text;
+    line-height: $line-height--small--text;
   }
   &:last-child {
-    margin-bottom: 35px;
+    margin-bottom: 37px;
+    padding-right: 17px;
   }
 }
