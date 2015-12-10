@@ -6,49 +6,84 @@
   padding-right: 20px;
   padding-left: 20px;
   &__block {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: $margin--reset;
+    margin-bottom: 8px;
     padding: $padding--reset;
     border: $display-reset;
   }
-  &__block:nth-child(1) {
-    padding-bottom: 23px;
-  }
-  &__block:nth-child(2) {
-    padding-bottom: 23px;
-  }
-  &__block:nth-child(3) {
-    padding-bottom: 23px;
-  }
-  &__block:nth-child(4) {
-    padding-bottom: 23px;
-  }
-  &__block:nth-child(5) {
-    padding-bottom: 23px;
+  &__block--border:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 1px;
+    background-color: $border-color--form-block;
   }
   &__input-number {
     display: flex;
     position: relative;
   }
   &__input-number::before {
-    @include input-reduction;
+    position: absolute;
+    content: "дн.";
+    top: 15px;
+    right: 27.8%;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    text-transform: lowercase;
+    color: $main-color-input-reduction;
   }
   &__input-human-counter {
     display: flex;
     position: relative;
   }
   &__input-human-counter::before {
-    @include human-counter;
+    position: absolute;
+    content: "чел.";
+    top: 15px;
+    right: 27.8%;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    text-transform: lowercase;
+    color: $main-color-input-reduction;
   }
   &__title {
-    @include form-legend;
+    margin: $margin--reset;
+    width: 100%;
+    font-size: $font-size--menu-link;
+    font-weight: bold;
+    line-height: $line-height--text;
+    text-align: center;
+  }
+  &__title--margin {
+    margin-top: 26px;
   }
   &__label {
-    @include form-label;
+    position: relative;
+    width: 100%;
+    margin-top: 19px;
+    margin-bottom: 7px;
+    margin-left: 6.25%;
+    font-size: $font-size-medium--text;
+    line-height: $line-height--text;
+    text-align: left;
+    sup {
+      margin-left: 3px;
+      color: $main-color--sup;
+    }
+  }
+  &__label--margin {
+    margin: $margin--reset;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    margin-left: 20px;
   }
   &__label--width{
-    width: 72%; //Ширина полей
+    width: 72%;
     margin-left: 81px;
   }
   &__input-field[type="text"] {
@@ -77,23 +112,17 @@
   }
   &__input-field[type="radio"] + label:before {
     position: absolute;
-    width: 53px;
-    height: 53px;
+    width: 20px;
+    height: 20px;
     content: "";
     top: 0;
-    left: 0;
+    left: -15px;
+    border: 15px solid $main-color--gray;
     background-color: $main-color--gray;
     border-radius: 50%;
   }
-  &__input-field[type="radio"]:checked + label:after {
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    content: "";
-    top: 15px;
-    left: 15px;
-    background-color: $main-color-radio--light-gray;
-    border-radius: 50%;
+  &__input-field[type="radio"]:checked + label:before {
+    background-color: $main-color--black;
   }
   &__input-field[type="date"] {
     width: 100%;
@@ -124,36 +153,55 @@
   &__user-data {
     @include form-user-data--block-model;
   }
-  &__user-data--headline {
-    display: flex;
-    width: 100%;
-    height: 58px;
-  }
   &__people-counter {
-    @include form-people-counter;
+    display: block;
+    min-width: 60px;
+    height: 58px;
+    margin-right: 4px;
+    padding-top: 17px;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    color: $main-color--black;
+    font-weight: bold;
+    text-align: center;
+    background-color: $main-color--gray;
   }
-  &__input-field--user[type="text"] {
-    width: 100%; //Ширина полей
-    margin-left: 4px;
+  &__user-data-left {
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
   }
-  &__input-field--margin[type="text"] {
-    margin-right: 0;
-    margin-left: 64px;
+  &__user-data-right {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
   }
   &__people-number {
-    margin-right: 17.1%;
-    margin-left: 4px;
+    display: block;
+    min-width: 66px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    line-height: 26px;
+    text-align: center;
   }
   &__input-field[type="checkbox"] {
     display: none;
   }
   &__input-field[type="checkbox"] + label {
     position: relative;
+    margin: $margin--reset;
+    margin-top: 28px;
+    margin-bottom: 27px;
     padding-left: 25%;
     vertical-align: top;
-    line-height: 50px;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
     font-weight: bold;
+    text-transform: capitalize;
     cursor: pointer;
+  }
+  &__label--text-transform {
+    text-transform: none!important;
   }
   &__input-field[type="checkbox"] + label:before {
     position: absolute;
@@ -161,7 +209,7 @@
     width: 56px;
     height: 56px;
     content: "";
-    top: 0;
+    top: -15px;
     left: 0;
     background-color: $main-color--gray;
     border-radius: 5px 5px 5px 5px;
@@ -169,7 +217,7 @@
   &__input-field[type="checkbox"]:checked + label::after {
     position: absolute;
     content: "";
-    top: 18px;
+    top: 3px;
     left: 18px;
     width: 18px;
     height: 8px;
@@ -192,22 +240,70 @@
     padding: $padding--reset;
     margin-bottom: 45px;
     padding-top: 16.5px;
-    padding-bottom: 18.5px;
+    padding-bottom: 15.5px;
     font-size: $font-size-large--button;
     font-weight: bold;
     line-height: $line-height--text;
     text-align: center;
     color: #c6c6c6;
     background-color: $main-color--gray;
+    cursor: pointer;
   }
   &__photo-upload-wrapper {
-    @include foto-upload-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   &__photo-preview {
-    @include foto-preview;
+    position: relative;
+    width: 24%;
+    height: 70px;
+    margin: $margin--reset;
+    margin-right: 12%;
+    margin-bottom: 35px;
   }
   &__photo-preview:nth-child(3n) {
     margin-right: $margin--reset;
   }
-  @include delete-file-button;
+  &__photo-image--delete {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    display: block;
+    width: 36px;
+    height: 36px;
+    font-size: $font-size--reset;
+    background: $main-color--gray;
+    border-radius: 50%;
+    transform: translateX(-50px);
+  }
+  &__photo-image--delete:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main-color-button--light-gray;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+  &__photo-image--delete:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 14px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main-color-button--light-gray;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(-45deg);
+  }
 }

@@ -1,6 +1,7 @@
 .search-information {
+  padding-top: 31px;
   &__title {
-    margin-top: 31px;
+    margin-top: $margin--reset;
     margin-bottom: 25px;
     font-size: $font-size-large--button;
     line-height: $line-height--text;

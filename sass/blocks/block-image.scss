@@ -4,5 +4,7 @@
   background-color: $main-color--white;
   &__item {
     display: block;
+    width: 100%;
+    height: auto;
   }
 }

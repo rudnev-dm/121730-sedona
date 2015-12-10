@@ -1,0 +1,22 @@
+.menu-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 56px;
+  font-size: $font-size--reset;
+  &__logo-link {
+    display: block;
+  }
+  &__button-menu--open {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 23px;
+    height: 22px;
+    font-size: $font-size--reset;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../img/page-header--menu/menu-button--open.png");
+    background-repeat: no-repeat;
+  }
+}
