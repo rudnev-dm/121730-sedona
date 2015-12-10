@@ -1,30 +1,41 @@
+$min-width--small: 320px;
+$max-width--small: 465px;
+$min-width--medium: 760px;
+$max-width--medium: 1200px;
 //------------------------------
 //Color palette
 //------------------------------
-$main-color: #81b3d2;
-$title-color: #ffffff;
+$main-color--light-blue: #81b3d2;
+$main-color--white: #ffffff;
+$main-color--black: #000000;
+$main-color--gray: #f2f2f2;
+$main-color-radio--light-gray: #333333;
+$main-color-button--light-gray: #bbbbbb;
+$main-color-input-reduction: #a9a9a9;
+$main-color--sup: #ff0000;
+$border-color--menu-item: #678fa8;
+$border-color--form-block: #e5e5e5;
+$input-date--border-color: #b8b8b8;
 
 //------------------------------
 //Typography
 //------------------------------
 
-$font-size--h2: 18px;
-$font-size--text: 14px;
-$font-size--block-number: 21px;
+$font-size-large--button: 21px;
+$font-size--menu-link: 18px;
+$font-size-medium--text:  14px;
 $font-size--reset: 0;
 
-$line-height--menu-item: 40px;
-$line-height--h2: 26px;
-$line-height-text: 21px;
-$line-height--block-number: 15px;
-$text-align--text-node: center;
+$line-height-menu--link: 40px;
+$line-height--text: 26px;
+$line-height-smaller--text: 24px;
+$line-height--small--text: 21px;
 
 //------------------------------
 //Block model
 //------------------------------
 
+$display-reset: none;
 $display--span: block;
-$align-self--flex-block: center;
 $margin--reset: 0;
 $padding--reset: 0;
-$font-size--reset: 0;

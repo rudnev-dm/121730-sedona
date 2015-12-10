@@ -4,218 +4,279 @@
 <head>
   <meta charset="UTF-8">
   <title>Отзывы</title>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&and;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="./css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="menu">
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="#" class="menu__link" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" title="Блог Шерифа">Блог Шерифа</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
-        </li>
-      </ul>
-    </div>
-
-
-
-    <div class="title-block">
-      <div class="logo">
-        <a href="index.html" title="Перейти на главную страницу">
-          <img class="logo-img" src="#" width="" height="" alt="Логотип компании">
-        </a>
+  <div class="wrapper">
+    <header class="page-header">
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
+            <button class="menu__button-menu--close" type="button" name="close">Закрыть меню</button>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html" title="Перейдите чтобы оставить отзыв">Оставить отзыв</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" title="Блог Шерифа">Блог Шерифа</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
+          </li>
+        </ul>
       </div>
-      <div class="title-text">
-        <p class="title__promo-text">Оставьте свой отзыв.</p>
-      </div>
-      <div class="title-preview">
-        <p class="title-preview__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях!</p>
-      </div>
-    </div>
-  </header>
 
+      <div class="title-block ">
 
-
-  <main class="page-content">
-    <form class="form" action="form-reference.php" method="get">
-
-      <fieldset class="form__block">
-        <legend class="form__title">Представьтесь пожалуйста</legend>
-
-        <label class="form__label" for="surname">Фамилия<sup>&lowast;</sup></label>
-        <input class="form__input-field" type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
-
-        <label class="form__label" for="name">Имя<sup>&lowast;</sup></label>
-        <input class="form__input-field" type="text" id="name" name="name" placeholder="Петр" required>
-
-        <label class="form__label" for="patronymic">Фамилия<sup>&lowast;</sup></label>
-        <input class="form__input-field" type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
-      </fieldset>
-
-
-
-      <fieldset class="form__block">
-        <legend class="form__title">Ваше общее впечатление:</legend>
-
-        <label class="form__label" for="positively">Скорее положительное</label>
-        <input class="form__input-field" type="radio" id="positively" name="positively" required checked>
-
-        <label class="form__label" for="negatively">Скорее отрицательное</label>
-        <input class="form__input-field"type="radio" id="negatively" name="negatively" required>
-      </fieldset>
-
-
-
-      <fieldset class="form__block">
-        <legend class="form__title">Дата вашей поездки</legend>
-
-        <label class="form__label" for="day-coming">Дата приезда<sup>&lowast;</sup></label>
-        <input type="date" id="day-coming" name="day-coming" required>
-
-        <label class="form__label" for="days-duration">Длительность пребывания<sup>&lowast;</sup>
-          <input class="form__input-field" type="range" id="days-duration" min="1" max="31" name="days-duration">
-        </label>
-        <output name="days-duration-output">14<span>.дн</span></output>
-
-        <label class="form__label" for="days-departure">Дата отъезда<sup>&lowast;</sup></label>
-        <input class="form__input-field" type="date" id="days-departure" name="days-departure">
-      </fieldset>
-
-
-
-      <fieldset class="form__block">
-        <legend class="form__title">Кол&ndash;во путешественников</legend>
-
-        <label class="form__label" for="quantity-people">Кол&ndash;во путешественников<sup>&lowast;</sup>
-          <input class="form__input-field" type="range" id="quantity-people" min="1" max="6" name="quantity-people">
-        </label>
-        <output name="quantity-people-output">2<span>.чел</span></output>
-
-        <div class="form__block-user-data">
-          <span class="form__people-number">№</span>
-
-          <label class="form__label" for="form__block__traveler-surname"><span class="form__block__people-counter">1</span>Фамилия<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
-
-          <label class="form__label" for="form__block__traveler-name">Имя<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
-
-          <label class="form__label" for="form__block__traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+        <div class="menu-container">
+          <a class="menu-container__logo-link" href="index.html" title="Перейти на главную страницу">
+            <img class="menu-container__logo-image" src="./img/page-header/logo.png" width="138" height="70" alt="Логотип компании">
+          </a>
+          <button class="menu-container__button-menu--open" type="button" name="open">Открыть меню</button>
         </div>
+
+        <div class="logo logo--mini">
+          <div class="logo__image-middle  logo__image-middle--small"></div>
+        </div>
+
+        <div class="title-text title-text--margin">
+          <h1 class="title-text__promo">Оставте свой отзыв</h1>
+        </div>
+
+        <div class="title-preview">
+          <p class="title-preview__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+
+      </div>
+    </header>
+
+
+
+    <main class="page-content">
+      <form class="form" action="form-reference.php" method="get">
 
         <div class="form__block">
-          <span class="form__people-number">№</span>
+          <h2 class="form__title">Представьтесь, пожалуйста</h2>
 
-          <label class="form__label" for="form__block__second-traveler-surname"><span class="form__block__people-counter">2</span>Фамилия<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="second-traveler-surname" name="second-traveler-surname" placeholder="Иванов" required>
+          <label class="form__label" for="surname">Фамилия:<sup>&lowast;</sup></label>
+          <input class="form__input-field" type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
 
-          <label class="form__label" for="form__block__second-traveler-name">Имя<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="second-traveler-name" name="second-traveler-name" placeholder="Петр" required>
+          <label class="form__label" for="name">Имя:<sup>&lowast;</sup></label>
+          <input class="form__input-field" type="text" id="name" name="name" placeholder="Петр" required>
 
-          <label class="form__label" for="form__block__second-traveler-patronymic">Фамилия<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="second-traveler-patronymic" name="second-traveler-patronymic" placeholder="Александрович" required>
+          <label class="form__label" for="patronymic">Отчество:<sup>&lowast;</sup></label>
+          <input class="form__input-field" type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
         </div>
-      </fieldset>
 
 
 
-      <fieldset class="form__block">
-        <legend class="form__title">Посещенные достопримечательности:</legend>
+        <div class="form__block form__block--border">
+          <h2 class="form__title form__title--margin">Ваше общее впечатление:</h2>
 
-        <label class="form__label" for="devil's-bridge">Мост Дьявола</label>
-        <input class="form__input-field" type="checkbox" id="devil's-bridge" name="devil's-bridge" required checked>
+          <input class="form__input-field" type="radio" id="positively" name="impression" checked>
+          <label class="form__label" for="positively">Скорее положительное</label>
 
-        <label class="form__label" for="slide-park">Слайд&ndash;парк</label>
-        <input class="form__input-field" type="checkbox" id="slide-park" name="slide-park" required>
+          <input class="form__input-field"type="radio" id="negatively" name="impression">
+          <label class="form__label" for="negatively">Скорее отрицательное</label>
+        </div>
 
-        <label class="form__label" for="mountain-bell">Гора&ndash;колокол</label>
-        <input class="form__input-field" type="checkbox" id="mountain-bell" name="mountain-bell" required checked>
 
-        <label class="form__label" for="red-rocks">Красные скалы</label>
-        <input class="form__input-field" type="checkbox" id="red-rocks" name="red-rocks" required checked>
-      </fieldset>
 
-      <!--Failure popup-->
+        <div class="form__block form__block--border">
+          <h2 class="form__title form__title--margin">Дата вашей поездки:</h2>
 
-      <div class="failure-popup">
-        <h2 class="failure-popup__title">Что&ndash;то пошло не так!</h2>
-        <p class="failure-popup__text">
-          Проверьте поля, выделенные красным,
-          скорее всего вы забыли их заполнить.
-        </p>
-      </div>
+          <label class="form__label" for="day-coming">Дата приезда:<sup>&lowast;</sup></label>
+          <input class="form__input-field" type="date" id="day-coming" name="day-coming" required>
 
-      <fieldset class="search-form-upload">
-        <legend class="form__title">Выбрать фотографии</legend>
+          <label class="form__label" for="days-duration">Длительность пребывания:<sup>&lowast;</sup></label>
+          <div class="form__input-number">
+            <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
 
-        <label class="form__label" for="choose-file">Выбрать файл</label>
-        <input class="form__input-field" type="file" id="choose-file" name="choose-file">
+            <input class="form__input-field" type="number" id="days-duration" min="1" max="31" name="days-duration">
 
-        <figure class="photo-preview">
-          <img class="photo-preview__image" src="#" width="" height="" alt="Превью фотографии">
-          <a class="photo-preview__delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
-        </figure>
+            <button class="form__input-button--right" type="button" name="Плюс один день" value="Плюс один день"></button>
+          </div>
 
-        <figure class="photo-preview">
-          <img class="photo-preview__image" src="#" width="" height="" alt="Превью фотографии">
-          <a class="photo-preview__delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
-        </figure>
+          <label class="form__label" for="days-departure">Дата отъезда:<sup>&lowast;</sup></label>
+          <input class="form__input-field" type="date" id="days-departure" name="days-departure" disabled>
+        </div>
 
-        <figure class="photo-preview">
-          <img class="photo-preview__image" src="#" width="" height="" alt="Превью фотографии">
-          <a class="photo-preview__delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
-        </figure>
 
-        <figure class="photo-preview">
-          <img class="photo-preview__image" src="#" width="" height="" alt="Превью фотографии">
-          <a class="photo-preview__delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
-        </figure>
-      </fieldset>
 
-      <button class="button form-button" type="button" name="Отправить отзыв" value="Отправить отзыв">Отправить отзыв</button>
+        <div class="form__block form__block--border">
+          <h2 class="form__title form__title--margin">Кол&ndash;во путешественников:</h2>
 
-      <!--Success popup-->
+          <label class="form__label" for="quantity-people">Количество путешественников<sup>&lowast;</sup></label>
+          <div class="form__input-human-counter">
+            <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
 
-      <div class="success-popup">
-        <h2 success-popup__title>Ваш отзыв отправлен!</h2>
-        <p success-popup__text>
-          Спасибо за ваше участие, ваш отзыв уже поступил к нам.
-          В ближайшее время мы опубликуем его на сайте.
-        </p>
-      </div>
+            <input class="form__input-field" type="number" id="quantity-people" min="1" max="6" name="quantity-people">
 
-    </form>
-  </main>
+            <button class="form__input-button--right" type="button" name="Плюс один день" value="Плюс один день"></button>
+          </div>
 
-  <footer class="page-footer">
-    <h2 class="page-footer__title">#visitsedona</h2>
-    <div class="social">
-      <ul class="social-list">
+          <div class="form__user-data">
+
+            <div class="form__user-data-left">
+              <span class="form__people-number">№</span>
+              <span class="form__people-counter">1</span>
+            </div>
+            <div class="form__user-data-right">
+
+              <label class="form__label form__label--margin" for="traveler-surname">Фамилия:<sup>&lowast;</sup></label>
+              <input class="form__input-field form__input-field--user" type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+
+              <label class="form__label form__label--margin" for="traveler-name">Имя:<sup>&lowast;</sup></label>
+              <input class="form__input-field form__input-field--user" type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
+
+              <label class="form__label form__label--margin" for="traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
+              <input class="form__input-field form__input-field--user" type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+
+            </div>
+          </div>
+
+          <div class="form__user-data">
+            <div class="form__user-data-left">
+              <span class="form__people-number">№</span>
+              <span class="form__people-counter">2</span>
+            </div>
+
+            <div class="form__user-data-right">
+
+              <label class="form__label form__label--margin" for="second-traveler-surname">Фамилия:<sup>&lowast;</sup></label>
+              <input class="form__input-field form__input-field--user" type="text" id="second-traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+
+              <label class="form__label form__label--margin" for="second-traveler-name">Имя:<sup>&lowast;</sup></label>
+              <input class="form__input-field form__input-field--user" type="text" id="second-traveler-name" name="traveler-name" placeholder="Петр" required>
+
+              <label class="form__label form__label--margin" for="second-traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
+              <input class="form__input-field form__input-field--user" type="text" id="second-traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="form__block form__block--border">
+          <h2 class="form__title form__title--margin">Посещенные достопримечательности:</h2>
+
+          <input class="form__input-field" type="checkbox" id="devil's-bridge" name="attraction" required checked>
+          <label class="form__label" for="devil's-bridge">Мост Дьявола</label>
+
+          <input class="form__input-field" type="checkbox" id="slide-park" name="attraction" required>
+          <label class="form__label" for="slide-park">Слайд&ndash;парк</label>
+
+          <input class="form__input-field" type="checkbox" id="mountain-bell" name="attraction" required checked>
+          <label class="form__label" for="mountain-bell">Гора&ndash;колокол</label>
+
+          <input class="form__input-field" type="checkbox" id="red-rocks" name="attraction" required checked>
+          <label class="form__label form__label--text-transform" for="red-rocks">Красные скалы</label>
+        </div>
+
+        <div class="form__block  form__block--upload">
+
+          <h2 class="form__title form__title--margin">Зугрузите фотографии:</h2>
+
+          <input class="form__input-field" type="file" id="choose-file" name="choose-file" multiple>
+          <label class="form__label" for="choose-file">Выбрать фотографии</label>
+
+          <div class="form__photo-upload-wrapper">
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+
+            <figure class="form__photo-preview">
+              <img class="form__photo-mage" src="#" width="" height="" alt="Превью фотографии">
+              <a class="form__photo-image--delete" href="#" title="Нажмите для удаления фотографии">Удалить фотографию</a>
+            </figure>
+          </div>
+        </div>
+
+        <div class="form-button--wrapper">
+          <button class="button form-button" type="button" name="Отправить отзыв" value="Отправить отзыв">Отправить отзыв</button>
+        </div>
+
+      </form>
+    </main>
+
+    <footer class="page-footer">
+
+      <h2 class="page-footer__title">#visitsedona</h2>
+
+      <ul class="social">
         <li class="social__item">
-          <a class="social__link" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Мы в Твиттере">Twitter</a>
+          <a class="social__link  social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Мы в Твиттере">Twitter</a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://www.facebook.com/htmlacademy" target="_blank" title="Мы в Фейсбук">Facebook</a>
+          <a class="social__link  social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" title="Мы в Фейсбук">Facebook</a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" target="_blank" title="Наш канал на Ютьюбе">Youtube</a>
+          <a class="social__link  social__link--youtube" href="#" target="_blank" title="Наш канал на Ютьюбе">Youtube</a>
         </li>
       </ul>
-    </div>
-    <div class="copyright">
-      Разработано <a class="copyright__link" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
-    </div>
-  </footer>
 
+      <div class="copyright">
+        Разработано <a class="copyright__link copyright__link--logo" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
+      </div>
+
+    </footer>
+
+    <!--Failure popup-->
+
+    <div class="failure-popup">
+      <h2 class="failure-popup__title">Что&ndash;то пошло не так!</h2>
+      <p class="failure-popup__text">
+        Проверьте поля, выделенные красным,
+        скорее всего вы забыли их заполнить.
+      </p>
+      <button class="popup-btn" type="button" name="ok" id="ok" value="ok">ok</button>
+    </div>
+
+    <!--Success popup-->
+
+    <div class="success-popup">
+      <h2 class="success-popup__title" >Ваш отзыв отправлен!</h2>
+      <p class="success-popup__text">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        В ближайшее время мы опубликуем его на сайте.
+      </p>
+      <div class="success-popup__button-wrapper">
+        <button class="popup-btn popup-btn--success" type="button" name="Закрыть окно" id="Close window" value="Закрыть окно">Закрыть окно</button>
+      </div>
+    </div>
+
+  </div>
 </body>
 
 </html>

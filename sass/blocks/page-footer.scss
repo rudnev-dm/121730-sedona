@@ -1,0 +1,9 @@
+.page-footer {
+  &__title {
+    margin-top: 39px;
+    margin-bottom: 40px;
+    font-size: $font-size-large--button;
+    line-height: $line-height--text;
+    text-align: center;
+  }
+}

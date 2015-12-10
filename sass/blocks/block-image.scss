@@ -1,0 +1,10 @@
+.block-image {
+  width: 100%;
+  font-size: $font-size--reset;
+  background-color: $main-color--white;
+  &__item {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

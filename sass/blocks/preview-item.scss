@@ -1,32 +1,38 @@
 .preview-item {
   display: flex;
-  justify-content: space-between;
+  &--wrapper {
+    margin-bottom: 41px;
+  }
   &__left {
-    width: 37.5%;
+    width: 38%;
   }
   &__left--home-img {
     background-image: url(../img/page-content/features-image--home.png);
     background-repeat: no-repeat;
-    background-position: 20px 30px;
+    background-position: 23px 30px;
   }
   &__left--food-img {
     background-image: url(../img/page-content/features-image--food.png);
     background-repeat: no-repeat;
-    background-position: 20px 30px;
+    background-position: 20px 35px;
   }
   &__left--surprise-img {
     background-image: url(../img/page-content/features-image--surprise.png);
     background-repeat: no-repeat;
-    background-position: 25px 30px;
+    background-position: 25px 28px;
   }
   &__title {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    margin-top: 42px;
+    margin-bottom: 14px;
   }
   &__text {
     margin: $margin--reset;
+    font-size: $font-size-medium--text;
+    line-height: $line-height--small--text;
   }
   &:last-child {
-    margin-bottom: 35px;
+    padding-right: 17px;
   }
 }

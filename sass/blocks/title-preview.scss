@@ -1,0 +1,12 @@
+.title-preview {
+  padding-right: 6.25%;
+  padding-left: 6.25%;
+  text-align: center;
+  &__text {
+      margin: $margin--reset;
+      margin-bottom: 32px;
+      font-size: $font-size-medium--text;
+      line-height: $line-height--text;
+      text-align: center;
+  }
+}

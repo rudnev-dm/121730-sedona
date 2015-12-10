@@ -1,0 +1,46 @@
+.search-btn {
+  display: block;
+  width: 90%;
+  margin-bottom: 50px;
+  margin-left: 5%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: $font-size-large--button;
+  line-height: $line-height--text;
+  font-weight: bold;
+  color: $main-color--white;
+  text-align: center;
+  background-color: $main-color--light-blue;
+}
+
+.popup-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-left: 18%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: $font-size-large--button;
+  line-height: $line-height--text;
+  font-weight: bold;
+  color: $main-color--white;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $main-color--light-blue;
+  border: none;
+  &--success {
+    display: block;
+    width: 100%;
+    margin: $margin--reset;
+    padding-top: 19px;
+    padding-bottom: 20px;
+    font-size: $font-size-large--button;
+    line-height: $line-height--text;
+    font-weight: bold;
+    color: $main-color--white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $main-color--light-blue;
+    border: none;
+  }
+}

@@ -1,0 +1,10 @@
+.form__input-button--left {
+  min-width: 60px;
+  height: 58px;
+  padding: $padding--reset;
+  background-color: $main-color--gray;
+  background-image: url("../img/icons/form-button--minus.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: $display-reset;
+}

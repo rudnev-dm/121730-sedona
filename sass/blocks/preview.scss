@@ -1,0 +1,49 @@
+.preview {
+  position: relative;
+  background-color: #eeeeee;
+  &--bg {
+    background-color: $main-color--light-blue;
+  }
+  &__number {
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-size: $font-size-medium--text;
+    line-height: $line-height--small--text;
+    text-align: center;
+  }
+  &__number--color {
+    color: $main-color--white;
+  }
+  &__title {
+    margin: $margin--reset;
+    padding-top: 56px;
+    font-size: $font-size--menu-link;
+    line-height: $line-height--text;
+    text-align: center;
+  }
+  &__title--margin {
+    padding-top: 29px;
+  }
+  &__title--color {
+    color: $main-color--white;
+  }
+  &__text {
+    margin: $margin--reset;
+    padding-bottom: 41px;
+    font-size: $font-size-medium--text;
+    line-height: $line-height--small--text;
+    text-align: center;
+  }
+  &__text--color {
+    color: $main-color--white;
+  }
+  &__border:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 20px;
+    width: 90%;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
+}
