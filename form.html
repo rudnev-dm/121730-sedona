@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
   <div class="wrapper">
     <header class="page-header">
       <div class="menu">
@@ -43,7 +44,7 @@
           <div class="logo__image-middle  logo__image-middle--small"></div>
         </div>
 
-        <div class="title-text title-text--margin">
+        <div class="title-text  title-text--margin">
           <h1 class="title-text__promo">Оставте свой отзыв</h1>
         </div>
 
@@ -59,102 +60,135 @@
     <main class="page-content">
       <form class="form" action="form-reference.php" method="get">
 
-        <div class="form__block">
-          <h2 class="form__title">Представьтесь, пожалуйста</h2>
+        <div class="form__block  form__block--border">
+          <h2 class="form__title  form__title--border  form__title--margin">Представьтесь, пожалуйста:</h2>
 
-          <label class="form__label" for="surname">Фамилия:<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
-
-          <label class="form__label" for="name">Имя:<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="name" name="name" placeholder="Петр" required>
-
-          <label class="form__label" for="patronymic">Отчество:<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
+          <div class="form__item">
+            <label class="form__label" for="surname">Фамилия:<sup>&lowast;</sup></label>
+            <input class="form__input-field" type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="name">Имя:<sup>&lowast;</sup></label>
+            <input class="form__input-field" type="text" id="name" name="name" placeholder="Петр" required>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="patronymic">Отчество:<sup>&lowast;</sup></label>
+            <input class="form__input-field" type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
+          </div>
         </div>
 
 
 
-        <div class="form__block form__block--border">
-          <h2 class="form__title form__title--margin">Ваше общее впечатление:</h2>
+        <div class="form__block  form__block--border">
+          <h2 class="form__title  form__title--margin">Ваше общее впечатление:</h2>
 
-          <input class="form__input-field" type="radio" id="positively" name="impression" checked>
-          <label class="form__label" for="positively">Скорее положительное</label>
-
-          <input class="form__input-field"type="radio" id="negatively" name="impression">
-          <label class="form__label" for="negatively">Скорее отрицательное</label>
-        </div>
-
-
-
-        <div class="form__block form__block--border">
-          <h2 class="form__title form__title--margin">Дата вашей поездки:</h2>
-
-          <label class="form__label" for="day-coming">Дата приезда:<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="date" id="day-coming" name="day-coming" required>
-
-          <label class="form__label" for="days-duration">Длительность пребывания:<sup>&lowast;</sup></label>
-          <div class="form__input-number">
-            <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
-
-            <input class="form__input-field" type="number" id="days-duration" min="1" max="31" name="days-duration">
-
-            <button class="form__input-button--right" type="button" name="Плюс один день" value="Плюс один день"></button>
+          <div class="form__item  form__item--radio">
+            <input class="form__input-field" type="radio" id="positively" name="impression" checked>
+            <label class="form__label" for="positively">Скорее положительное</label>
           </div>
 
-          <label class="form__label" for="days-departure">Дата отъезда:<sup>&lowast;</sup></label>
-          <input class="form__input-field" type="date" id="days-departure" name="days-departure" disabled>
+          <div class="form__item  form__item--radio">
+            <input class="form__input-field"type="radio" id="negatively" name="impression">
+            <label class="form__label" for="negatively">Скорее отрицательное</label>
+          </div>
+        </div>
+
+
+        <div class="form__block  form__block--border">
+          <h2 class="form__title  form__title--margin">Дата вашей поездки:</h2>
+
+          <div class="form__item">
+            <label class="form__label" for="day-coming">Дата приезда:<sup>&lowast;</sup></label>
+            <input class="form__input-field" type="date" id="day-coming" name="day-coming" required>
+          </div>
+
+          <div class="form__item">
+            <label class="form__label  form__label--font-size-reset" for="days-duration"><span class="form__mobile--text">Длительность пребывания:<sup>&lowast;</sup></span><span class="form__tablet--text">Дней пребывания:<sup>&lowast;</sup></span></label>
+            <div class="form__input-number">
+              <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
+
+              <input class="form__input-field" type="number" id="days-duration" min="1" max="31" name="days-duration">
+
+              <button class="form__input-button--right" type="button" name="Плюс один день" value="Плюс один день"></button>
+            </div>
+          </div>
+
+          <div class="form__item">
+            <label class="form__label" for="days-departure">Дата отъезда:<sup>&lowast;</sup></label>
+            <input class="form__input-field  form__input-field--box-shadow" type="date" id="days-departure" name="days-departure" disabled>
+          </div>
         </div>
 
 
 
-        <div class="form__block form__block--border">
-          <h2 class="form__title form__title--margin">Кол&ndash;во путешественников:</h2>
+        <div class="form__block  form__block--align form__block--border">
+          <h2 class="form__title  form__title--margin">Кол&ndash;во путешественников:</h2>
+          <label class="form__label  form__label--margin-reset" for="quantity-people">Количество путешественников:<sup>&lowast;</sup></label>
+          <div class="form__item  form__item--margin-reset">
+            <div class="form__input-human-counter">
+              <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
 
-          <label class="form__label" for="quantity-people">Количество путешественников<sup>&lowast;</sup></label>
-          <div class="form__input-human-counter">
-            <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
+              <input class="form__input-field" type="number" id="quantity-people" min="1" max="6" name="quantity-people">
 
-            <input class="form__input-field" type="number" id="quantity-people" min="1" max="6" name="quantity-people">
+              <button class="form__input-button--right" type="button" name="Плюс один день" value="Плюс один день"></button>
+            </div>
+          </div>
 
-            <button class="form__input-button--right" type="button" name="Плюс один день" value="Плюс один день"></button>
+          <div class="form__user-data  form__user-data--margin">
+
+            <div class="form__user-data-left">
+
+              <div class="form__item">
+                <span class="form__people-number">№</span>
+                <span class="form__people-counter">1</span>
+              </div>
+
+            </div>
+
+            <div class="form__user-data-right">
+
+              <div class="form__item  form__item--margin-tablet">
+                <label class="form__label form__label--margin" for="traveler-surname">Фамилия:<sup>&lowast;</sup></label>
+                <input class="form__input-field  form__input-field--user" type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+              </div>
+
+              <div class="form__item  form__item--margin-tablet">
+                <label class="form__label form__label--margin" for="traveler-name">Имя:<sup>&lowast;</sup></label>
+                <input class="form__input-field  form__input-field--user" type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
+              </div>
+
+              <div class="form__item  form__item--margin-tablet">
+                <label class="form__label  form__label--margin" for="traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
+                <input class="form__input-field  form__input-field--user" type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+              </div>
+
+            </div>
           </div>
 
           <div class="form__user-data">
-
             <div class="form__user-data-left">
-              <span class="form__people-number">№</span>
-              <span class="form__people-counter">1</span>
-            </div>
-            <div class="form__user-data-right">
-
-              <label class="form__label form__label--margin" for="traveler-surname">Фамилия:<sup>&lowast;</sup></label>
-              <input class="form__input-field form__input-field--user" type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
-
-              <label class="form__label form__label--margin" for="traveler-name">Имя:<sup>&lowast;</sup></label>
-              <input class="form__input-field form__input-field--user" type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
-
-              <label class="form__label form__label--margin" for="traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
-              <input class="form__input-field form__input-field--user" type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
-
-            </div>
-          </div>
-
-          <div class="form__user-data">
-            <div class="form__user-data-left">
-              <span class="form__people-number">№</span>
-              <span class="form__people-counter">2</span>
+              <div class="form__item">
+                <span class="form__people-number">№</span>
+                <span class="form__people-counter">2</span>
+              </div>
             </div>
 
             <div class="form__user-data-right">
 
-              <label class="form__label form__label--margin" for="second-traveler-surname">Фамилия:<sup>&lowast;</sup></label>
-              <input class="form__input-field form__input-field--user" type="text" id="second-traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+              <div class="form__item  form__item--margin-tablet">
+                <label class="form__label  form__label--margin" for="second-traveler-surname">Фамилия:<sup>&lowast;</sup></label>
+                <input class="form__input-field  form__input-field--user" type="text" id="second-traveler-surname" name="traveler-surname" placeholder="Иванов" required>
+              </div>
 
-              <label class="form__label form__label--margin" for="second-traveler-name">Имя:<sup>&lowast;</sup></label>
-              <input class="form__input-field form__input-field--user" type="text" id="second-traveler-name" name="traveler-name" placeholder="Петр" required>
+              <div class="form__item  form__item--margin-tablet">
+                <label class="form__label  form__label--margin" for="second-traveler-name">Имя:<sup>&lowast;</sup></label>
+                <input class="form__input-field  form__input-field--user" type="text" id="second-traveler-name" name="traveler-name" placeholder="Петр" required>
+              </div>
 
-              <label class="form__label form__label--margin" for="second-traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
-              <input class="form__input-field form__input-field--user" type="text" id="second-traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+              <div class="form__item  form__item--margin-tablet">
+                <label class="form__label  form__label--margin" for="second-traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
+                <input class="form__input-field  form__input-field--user" type="text" id="second-traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
+              </div>
 
             </div>
           </div>
@@ -162,25 +196,31 @@
 
 
 
-        <div class="form__block form__block--border">
-          <h2 class="form__title form__title--margin">Посещенные достопримечательности:</h2>
+        <div class="form__block  form__block--border">
+          <h2 class="form__title  form__title--margin  form__title--margin-tablet  form__title--wrap">Посещенные достопримечательности:</h2>
 
-          <input class="form__input-field" type="checkbox" id="devil's-bridge" name="attraction" required checked>
-          <label class="form__label" for="devil's-bridge">Мост Дьявола</label>
+          <div class="form__item  form__item--attraction  form__item--padding">
+            <input class="form__input-field" type="checkbox" id="devil's-bridge" name="attraction" required checked>
+            <label class="form__label  form__label--padding" for="devil's-bridge">Мост Дьявола</label>
 
-          <input class="form__input-field" type="checkbox" id="slide-park" name="attraction" required>
-          <label class="form__label" for="slide-park">Слайд&ndash;парк</label>
 
-          <input class="form__input-field" type="checkbox" id="mountain-bell" name="attraction" required checked>
-          <label class="form__label" for="mountain-bell">Гора&ndash;колокол</label>
+            <input class="form__input-field" type="checkbox" id="slide-park" name="attraction" required>
+            <label class="form__label  form__label--padding" for="slide-park">Слайд&ndash;парк</label>
+          </div>
 
-          <input class="form__input-field" type="checkbox" id="red-rocks" name="attraction" required checked>
-          <label class="form__label form__label--text-transform" for="red-rocks">Красные скалы</label>
+          <div class="form__item  form__item--attraction">
+            <input class="form__input-field" type="checkbox" id="mountain-bell" name="attraction" required checked>
+            <label class="form__label" for="mountain-bell">Гора&ndash;колокол</label>
+
+
+            <input class="form__input-field" type="checkbox" id="red-rocks" name="attraction" required checked>
+            <label class="form__label  form__label--text-transform" for="red-rocks">Красные скалы</label>
+          </div>
         </div>
 
         <div class="form__block  form__block--upload">
 
-          <h2 class="form__title form__title--margin">Зугрузите фотографии:</h2>
+          <h2 class="form__title  form__title--margin">Зугрузите фотографии:</h2>
 
           <input class="form__input-field" type="file" id="choose-file" name="choose-file" multiple>
           <label class="form__label" for="choose-file">Выбрать фотографии</label>
