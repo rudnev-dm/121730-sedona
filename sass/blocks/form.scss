@@ -1,309 +1,753 @@
-.form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: 20px;
-  padding-left: 20px;
-  &__block {
+@media (max-width: $max-width--small) {
+  .form {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: $margin--reset;
-    margin-bottom: 8px;
-    padding: $padding--reset;
-    border: $display-reset;
-  }
-  &__block--border:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: -20px;
-    width: 100%;
-    height: 1px;
-    background-color: $border-color--form-block;
-  }
-  &__input-number {
-    display: flex;
-    position: relative;
-  }
-  &__input-number::before {
-    position: absolute;
-    content: "дн.";
-    top: 15px;
-    right: 27.8%;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    text-transform: lowercase;
-    color: $main-color-input-reduction;
-  }
-  &__input-human-counter {
-    display: flex;
-    position: relative;
-  }
-  &__input-human-counter::before {
-    position: absolute;
-    content: "чел.";
-    top: 15px;
-    right: 27.8%;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    text-transform: lowercase;
-    color: $main-color-input-reduction;
-  }
-  &__title {
-    margin: $margin--reset;
-    width: 100%;
-    font-size: $font-size--menu-link;
-    font-weight: bold;
-    line-height: $line-height--text;
-    text-align: center;
-  }
-  &__title--margin {
-    margin-top: 26px;
-  }
-  &__label {
-    position: relative;
-    width: 100%;
-    margin-top: 19px;
-    margin-bottom: 7px;
-    margin-left: 6.25%;
-    font-size: $font-size-medium--text;
-    line-height: $line-height--text;
-    text-align: left;
-    sup {
-      margin-left: 3px;
-      color: $main-color--sup;
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    &__block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: $margin--reset;
+      margin-bottom: 8px;
+      padding: $padding--reset;
+      border: $display-reset;
+    }
+    &__item {
+      margin-bottom: 17px;
+    }
+    &__item--radio:nth-child(3) {
+      margin-top: 15px;
+    }
+    &__item--attraction {
+      display: flex;
+      flex-direction: column;
+    }
+    &__mobile--text {
+      display: block;
+      padding-left: 6.25%;
+      text-align: left;
+      font-size: $font-size-medium--text;
+      line-height: $line-height--text;
+    }
+    &__tablet--text {
+      display: none;
+    }
+    &__block--border:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -20px;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__input-number {
+      display: flex;
+      position: relative;
+    }
+    &__input-number::before {
+      position: absolute;
+      content: "дн.";
+      top: 15px;
+      right: 27.8%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      text-transform: lowercase;
+      color: $main-color-input-reduction;
+    }
+    &__input-human-counter {
+      display: flex;
+      position: relative;
+    }
+    &__input-human-counter::before {
+      position: absolute;
+      content: "чел.";
+      top: 15px;
+      right: 27.8%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      text-transform: lowercase;
+      color: $main-color-input-reduction;
+    }
+    &__title {
+      position: relative;
+      margin: $margin--reset;
+      margin-bottom: 29px;
+      width: 100%;
+      font-size: $font-size--menu-link;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+    &__title--border:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: -25px;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__title--margin {
+      margin-top: 26px;
+    }
+    &__label {
+      position: relative;
+      width: 100%;
+      margin-top: 19px;
+      margin-bottom: 7px;
+      margin-left: 6.25%;
+      font-size: $font-size-medium--text;
+      line-height: $line-height--text;
+      text-align: left;
+      sup {
+        margin-left: 3px;
+        color: $main-color--sup;
+      }
+    }
+    &__label--margin {
+      margin: $margin--reset;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      margin-left: 20px;
+    }
+    &__label--width{
+      width: 72%;
+      margin-left: 81px;
+    }
+    &__label--font-size-reset {
+      font-size: $font-size--reset;
+    }
+    &__input-field[type="text"] {
+      padding-top: 23px;
+      padding-right: 6.25%;
+      padding-left: 6.25%;
+      padding-bottom: 21px;
+      width: 100%;
+      height: 58px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      color: $main-color--black;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__input-field[type="radio"] {
+      display: $display-reset;
+    }
+    &__input-field[type="radio"] + label {
+      position: relative;
+      padding-left: 22%;
+      vertical-align: top;
+      line-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &__input-field[type="radio"] + label:before {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      content: "";
+      top: -15;
+      left: -15px;
+      border: 15px solid $main-color--gray;
+      background-color: $main-color--gray;
+      border-radius: 50%;
+    }
+    &__input-field[type="radio"]:checked + label:before {
+      background-color: $main-color--black;
+    }
+    &__item--button {
+      display: flex;
+      align-items: flex-end;
+    }
+    &__input-field[type="date"] {
+      width: 100%;
+      height: 58px;
+      padding-left: 6.25%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      font-weight: bold;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__input-field--box-shadow[type="date"] {
+      box-shadow: inset 0 0 0 2px $input-date--border-color;
+    }
+    &__input-field[type="number"] {
+      appearance: textfield;
+      width: 100%;
+      height: 58px;
+      margin-right: 4px;
+      margin-left: 4px;
+      padding-left: 4%;
+      padding-right: 10%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__user-data {
+      @include form-user-data--block-model;
+    }
+    &__people-counter {
+      display: block;
+      min-width: 60px;
+      height: 58px;
+      margin-right: 4px;
+      padding-top: 17px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      color: $main-color--black;
+      font-weight: bold;
+      text-align: center;
+      background-color: $main-color--gray;
+    }
+    &__user-data-left {
+      display: flex;
+      flex-direction: column;
+      min-width: 60px;
+    }
+    &__user-data-right {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+    }
+    &__people-number {
+      display: block;
+      min-width: 66px;
+      line-height: 26px;
+      text-align: center;
+    }
+    &__input-field[type="checkbox"] {
+      display: none;
+    }
+    &__input-field[type="checkbox"] + label {
+      position: relative;
+      margin: $margin--reset;
+      margin-top: 28px;
+      margin-bottom: 27px;
+      padding-left: 25%;
+      vertical-align: top;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      font-weight: bold;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+    &__label--text-transform {
+      text-transform: none!important;
+    }
+    &__input-field[type="checkbox"] + label:before {
+      position: absolute;
+      content: "";
+      width: 56px;
+      height: 56px;
+      content: "";
+      top: -15px;
+      left: 0;
+      background-color: $main-color--gray;
+      border-radius: 5px 5px 5px 5px;
+    }
+    &__input-field[type="checkbox"]:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 3px;
+      left: 18px;
+      width: 18px;
+      height: 8px;
+      border: 5px solid $main-color--black;
+      border-top-style: $display-reset;
+      border-right-style: $display-reset;
+      transform: rotate(-45deg);
+    }
+    &__block--upload {
+      position: relative;
+    }
+    &__input-field[type="file"] {
+      display: none;
+    }
+    &__input-field[type="file"] + label {
+      display: block;
+      width: 100%;
+      margin: $margin--reset;
+      margin-top: 18px;
+      padding: $padding--reset;
+      margin-bottom: 45px;
+      padding-top: 16.5px;
+      padding-bottom: 15.5px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+      color: #c6c6c6;
+      background-color: $main-color--gray;
+      cursor: pointer;
+    }
+    &__photo-upload-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__photo-preview {
+      position: relative;
+      width: 24%;
+      height: 70px;
+      margin: $margin--reset;
+      margin-right: 12%;
+      margin-bottom: 35px;
+    }
+    &__photo-preview:nth-child(3n) {
+      margin-right: $margin--reset;
+    }
+    &__photo-image--delete {
+      position: absolute;
+      top: -18px;
+      left: 100%;
+      display: block;
+      width: 36px;
+      height: 36px;
+      font-size: $font-size--reset;
+      background: $main-color--gray;
+      border-radius: 50%;
+      transform: translateX(-50px);
+    }
+    &__photo-image--delete:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $main-color-button--light-gray;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+    &__photo-image--delete:after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 14px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $main-color-button--light-gray;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(-45deg);
     }
   }
-  &__label--margin {
-    margin: $margin--reset;
-    margin-top: 24px;
-    margin-bottom: 8px;
-    margin-left: 20px;
-  }
-  &__label--width{
-    width: 72%;
-    margin-left: 81px;
-  }
-  &__input-field[type="text"] {
-    padding-top: 23px;
-    padding-right: 6.25%;
-    padding-left: 6.25%;
-    padding-bottom: 21px;
-    width: 100%;
-    height: 58px;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    color: $main-color--black;
-    background-color: $main-color--gray;
-    border: $display-reset;
-  }
-  &__input-field[type="radio"] {
-    display: $display-reset;
-  }
-  &__input-field[type="radio"] + label {
+}
+
+@media (min-width: 768px) and (max-width: 2200px) {
+  .form {
     position: relative;
-    padding-left: 22%;
-    vertical-align: top;
-    line-height: 50px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  &__input-field[type="radio"] + label:before {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    content: "";
-    top: 0;
-    left: -15px;
-    border: 15px solid $main-color--gray;
-    background-color: $main-color--gray;
-    border-radius: 50%;
-  }
-  &__input-field[type="radio"]:checked + label:before {
-    background-color: $main-color--black;
-  }
-  &__input-field[type="date"] {
-    width: 100%;
-    height: 58px;
-    padding-left: 6.25%;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    font-weight: bold;
-    background-color: $main-color--gray;
-    border: $display-reset;
-  }
-  &__input-field[type="date"]:last-child {
-    box-shadow: inset 0 0 0 2px $input-date--border-color;
-  }
-  &__input-field[type="number"] {
-    appearance: textfield;
-    width: 100%;
-    height: 58px;
-    margin-right: 4px;
-    margin-left: 4px;
-    padding-left: 4%;
-    padding-right: 10%;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    background-color: $main-color--gray;
-    border: $display-reset;
-  }
-  &__user-data {
-    @include form-user-data--block-model;
-  }
-  &__people-counter {
-    display: block;
-    min-width: 60px;
-    height: 58px;
-    margin-right: 4px;
-    padding-top: 17px;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    color: $main-color--black;
-    font-weight: bold;
-    text-align: center;
-    background-color: $main-color--gray;
-  }
-  &__user-data-left {
     display: flex;
     flex-direction: column;
-    min-width: 60px;
-  }
-  &__user-data-right {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-  }
-  &__people-number {
-    display: block;
-    min-width: 66px;
-    margin-top: 24px;
-    margin-bottom: 8px;
-    line-height: 26px;
-    text-align: center;
-  }
-  &__input-field[type="checkbox"] {
-    display: none;
-  }
-  &__input-field[type="checkbox"] + label {
-    position: relative;
-    margin: $margin--reset;
-    margin-top: 28px;
-    margin-bottom: 27px;
-    padding-left: 25%;
-    vertical-align: top;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-    font-weight: bold;
-    text-transform: capitalize;
-    cursor: pointer;
-  }
-  &__label--text-transform {
-    text-transform: none!important;
-  }
-  &__input-field[type="checkbox"] + label:before {
-    position: absolute;
-    content: "";
-    width: 56px;
-    height: 56px;
-    content: "";
-    top: -15px;
-    left: 0;
-    background-color: $main-color--gray;
-    border-radius: 5px 5px 5px 5px;
-  }
-  &__input-field[type="checkbox"]:checked + label::after {
-    position: absolute;
-    content: "";
-    top: 3px;
-    left: 18px;
-    width: 18px;
-    height: 8px;
-    border: 5px solid $main-color--black;
-    border-top-style: $display-reset;
-    border-right-style: $display-reset;
-    transform: rotate(-45deg);
-  }
-  &__block--upload {
-    position: relative;
-  }
-  &__input-field[type="file"] {
-    display: none;
-  }
-  &__input-field[type="file"] + label {
-    display: block;
-    width: 100%;
-    margin: $margin--reset;
-    margin-top: 18px;
-    padding: $padding--reset;
-    margin-bottom: 45px;
-    padding-top: 16.5px;
-    padding-bottom: 15.5px;
-    font-size: $font-size-large--button;
-    font-weight: bold;
-    line-height: $line-height--text;
-    text-align: center;
-    color: #c6c6c6;
-    background-color: $main-color--gray;
-    cursor: pointer;
-  }
-  &__photo-upload-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  &__photo-preview {
-    position: relative;
-    width: 24%;
-    height: 70px;
-    margin: $margin--reset;
-    margin-right: 12%;
-    margin-bottom: 35px;
-  }
-  &__photo-preview:nth-child(3n) {
-    margin-right: $margin--reset;
-  }
-  &__photo-image--delete {
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    display: block;
-    width: 36px;
-    height: 36px;
-    font-size: $font-size--reset;
-    background: $main-color--gray;
-    border-radius: 50%;
-    transform: translateX(-50px);
-  }
-  &__photo-image--delete:before {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid $main-color-button--light-gray;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    transform: rotate(45deg);
-  }
-  &__photo-image--delete:after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 14px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid $main-color-button--light-gray;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    transform: rotate(-45deg);
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    &__block {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: $margin--reset;
+      margin-bottom: 8px;
+      padding: $padding--reset;
+      padding-right: 40px;
+      padding-left: 40px;
+      border: $display-reset;
+    }
+    &__block--align {
+      justify-content: center;
+    }
+    &__item {
+      width: 27.5%;
+      margin-right: 7.9%;
+    }
+    &__item:last-child {
+      margin: 0;
+    }
+    &__item--radio {
+      display: flex;
+      width: 42.3%;
+      margin: $margin--reset;
+      margin-right: 12%;
+    }
+    &__item--radio:last-child {
+      margin: 0;
+    }
+    &__item--margin-tablet {
+      width: 100%;
+      margin: $margin--reset;
+      margin-right: 0.7%;
+    }
+    &__mobile--text {
+      display: none;
+    }
+    &__tablet--text {
+      display: inline-block;
+    }
+    &__item--attraction {
+      display: flex;
+      flex-direction: column;
+      width: 46%;
+    }
+    &__item--padding {
+      padding-left: 90px;
+    }
+    &__item--margin-reset {
+      margin: $margin--reset;
+    }
+    &__block--border:before {
+      position: absolute;
+      content: "";
+      left: 40px;
+      bottom: -48px;
+      width: 16.2%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__block--border:after {
+      position: absolute;
+      content: "";
+      right: 40px;
+      bottom: -48px;
+      width: 16.2%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__input-number {
+      position: relative;
+      display: flex;
+    }
+    &__input-number::before {
+      position: absolute;
+      content: "дн.";
+      top: 15px;
+      right: 27.8%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      text-transform: lowercase;
+      color: $main-color-input-reduction;
+      display: none;
+    }
+    &__input-human-counter {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__input-human-counter::before {
+      position: absolute;
+      content: "чел.";
+      top: 15px;
+      right: 27.8%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      text-transform: lowercase;
+      color: $main-color-input-reduction;
+      display: none;
+    }
+    &__title {
+      position: relative;
+      margin: $margin--reset;
+      width: 100%;
+      font-size: $font-size--menu-link;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+    &__title--border:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 13px;
+      width: 18.2%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__title--border:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 13px;
+      width: 18.2%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__title--margin {
+      margin-top: 26px;
+      margin-bottom: 25px;
+    }
+    &__title--margin-tablet {
+      margin-bottom: 35px;
+    }
+    &__title--wrap {
+      word-spacing: 700px;
+    }
+    &__label {
+      position: relative;
+      width: 100%;
+      margin-top: 19px;
+      margin-bottom: 7px;
+      margin-left: 6.25%;
+      font-size: $font-size-medium--text;
+      line-height: $line-height--text;
+      text-align: left;
+      sup {
+        margin-left: 3px;
+        color: $main-color--sup;
+      }
+    }
+    &__label--margin {
+      margin: $margin--reset;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      margin-left: 20px;
+    }
+    &__label--margin-reset {
+      margin: $margin--reset;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .form__input-field[type="checkbox"] + label.form__label--padding{
+      padding-left: 37%;
+    }
+    &__label--width{
+      width: 72%;
+      margin-left: 81px;
+    }
+    &__input-field[type="text"] {
+      padding-top: 23px;
+      padding-right: 6.25%;
+      padding-left: 6.25%;
+      padding-bottom: 21px;
+      width: 100%;
+      height: 58px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      color: $main-color--black;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__input-field[type="radio"] {
+      display: $display-reset;
+    }
+    &__input-field[type="radio"] + label {
+      position: relative;
+      padding-left: 22%;
+      vertical-align: top;
+      line-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &__input-field[type="radio"] + label:before {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      content: "";
+      top: 0;
+      left: -15px;
+      border: 15px solid $main-color--gray;
+      background-color: $main-color--gray;
+      border-radius: 50%;
+    }
+    &__input-field[type="radio"]:checked + label:before {
+      background-color: $main-color--black;
+    }
+    &__input-field[type="date"] {
+      width: 100%;
+      height: 58px;
+      padding-left: 6.25%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      font-weight: bold;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__input-field--box-shadow[type="date"] {
+      box-shadow: inset 0 0 0 2px $input-date--border-color;
+    }
+    &__input-field[type="number"] {
+      appearance: textfield;
+      width: 100%;
+      height: 58px;
+      padding-left: 4%;
+      padding-right: 10%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__user-data {
+      @include form-user-data--block-model;
+    }
+    &__user-data--margin {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    &__people-counter {
+      display: block;
+      min-width: 60px;
+      height: 58px;
+      margin-right: 4px;
+      padding-top: 17px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      color: $main-color--black;
+      font-weight: bold;
+      text-align: center;
+      background-color: $main-color--gray;
+    }
+    &__user-data-left {
+      display: flex;
+      flex-direction: row;
+      min-width: 60px;
+      margin-right: 0.7%;
+    }
+    &__user-data-right {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    &__people-number {
+      display: block;
+      min-width: 60px;
+      line-height: 26px;
+      text-align: center;
+    }
+    &__input-field[type="checkbox"] {
+      display: none;
+    }
+    &__input-field[type="checkbox"] + label {
+      position: relative;
+      margin: $margin--reset;
+      margin-top: 28px;
+      margin-bottom: 27px;
+      padding-left: 25%;
+      vertical-align: top;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      font-weight: bold;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+    &__label--text-transform {
+      text-transform: none!important;
+    }
+    &__input-field[type="checkbox"] + label:before {
+      position: absolute;
+      content: "";
+      width: 56px;
+      height: 56px;
+      content: "";
+      top: -15px;
+      left: 0;
+      background-color: $main-color--gray;
+      border-radius: 5px 5px 5px 5px;
+    }
+    &__input-field[type="checkbox"]:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 3px;
+      left: 18px;
+      width: 18px;
+      height: 8px;
+      border: 5px solid $main-color--black;
+      border-top-style: $display-reset;
+      border-right-style: $display-reset;
+      transform: rotate(-45deg);
+    }
+    &__block--upload {
+      position: relative;
+      justify-content: center;
+    }
+    &__input-field[type="file"] {
+      display: none;
+    }
+    &__input-field[type="file"] + label {
+      display: block;
+      width: 59%;
+      margin: $margin--reset;
+      margin-top: 18px;
+      padding: $padding--reset;
+      margin-bottom: 45px;
+      padding-top: 16.5px;
+      padding-bottom: 15.5px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+      color: #c6c6c6;
+      background-color: $main-color--gray;
+      cursor: pointer;
+    }
+    &__photo-upload-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__photo-preview {
+      position: relative;
+      width: 24%;
+      height: 70px;
+      margin: $margin--reset;
+      margin-right: 12%;
+      margin-bottom: 35px;
+    }
+    &__photo-preview:nth-child(3n) {
+      margin-right: $margin--reset;
+    }
+    &__photo-image--delete {
+      position: absolute;
+      top: -18px;
+      left: 100%;
+      display: block;
+      width: 36px;
+      height: 36px;
+      font-size: $font-size--reset;
+      background: $main-color--gray;
+      border-radius: 50%;
+      transform: translateX(-50px);
+    }
+    &__photo-image--delete:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $main-color-button--light-gray;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+    &__photo-image--delete:after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 14px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $main-color-button--light-gray;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(-45deg);
+    }
   }
 }
