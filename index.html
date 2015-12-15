@@ -14,6 +14,13 @@
   <div class="wrapper">
     <header class="page-header">
       <nav class="menu">
+        <div class="menu-container">
+          <a class="menu-container__logo-link" href="index.html" title="Перейти на главную страницу">
+            <img class="menu-container__logo-image" src="./img/page-header/logo.png" width="138" height="70" alt="Логотип компании">
+          </a>
+          <button class="menu-container__button-menu--open" type="button" name="open">Открыть меню</button>
+        </div>
+
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#" title="Перейдите чтобы ознакомиться с информацией">Информация</a>
@@ -29,12 +36,7 @@
             <a class="menu__link" href="#" title="Перейдите чтобы просмореть гостиницы">Гостиницы</a>
           </li>
         </ul>
-        <div class="menu-container">
-          <a class="menu-container__logo-link" href="index.html" title="Перейти на главную страницу">
-            <img class="menu-container__logo-image" src="./img/page-header/logo.png" width="138" height="70" alt="Логотип компании">
-          </a>
-          <button class="menu-container__button-menu--open" type="button" name="open">Открыть меню</button>
-        </div>
+
       </nav>
 
       <div class="title-block title-block--border">
@@ -46,7 +48,7 @@
         </div>
 
         <div class="title-text">
-          <h1 class="title-text__promo">Седона &mdash; небольшой городок в Аризоне,<br>зслуживающий большего!</h1>
+          <h1 class="title-text__promo">Седона &mdash; небольшой городок в Аризоне, служивающий большего!</h1>
         </div>
 
         <div class="title-preview">
@@ -59,8 +61,11 @@
 
 
     <main class="page-content">
+
       <div class="features">
+
         <div class="features-top">
+
           <div class="preview  preview--bg">
             <h2 class="preview__title  preview__title--color">Настоящий городок</h2>
             <div class="preview__number  preview__number--color">&ndash;№1&ndash;</div>
@@ -105,33 +110,36 @@
 
       <div class="features">
 
-      <div class="features-top">
-        <div class="preview preview--bg  preview--order">
-          <h2 class="preview__title  preview__title--color  preview__title--padding">Там есть Мост Дьявола</h2>
-          <div class="preview__number  preview__number--color">&ndash;№2&ndash;</div>
-          <p class="preview__text  preview__text--color">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <div class="features-top">
+
+          <div class="preview preview--bg  preview--order">
+            <h2 class="preview__title  preview__title--color  preview__title--padding">Там есть Мост Дьявола</h2>
+            <div class="preview__number  preview__number--color">&ndash;№2&ndash;</div>
+            <p class="preview__text  preview__text--color">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </div>
+
+          <div class="block-image">
+            <img class="block-image__item" src="./img/page-content/preview--devil's-bridge.jpg" width="320" height="256" alt="Мост дьявола">
+          </div>
+
         </div>
-        <div class="block-image">
-          <img class="block-image__item" src="./img/page-content/preview--devil's-bridge.jpg" width="320" height="256" alt="Мост дьявола">
-        </div>
-      </div>
 
 
         <div class="preview-border  features-bottom">
-          <div class="preview  preview__border">
+          <div class="preview  preview__border preview--column-width-one">
             <h2 class="preview__title  preview__title--margin">Небольшая площадь</h2>
             <div class="preview__number">&ndash;№3&ndash;</div>
-            <p class="preview__text  preview__text--padding">Все достопримечательности находятся очень близко.</p>
+            <p class="preview__text  preview__text--padding">Все достопримеча&shy;тельности находятся очень близко.</p>
           </div>
 
-          <div class="preview">
+          <div class="preview  preview--column-width-two">
             <h2 class="preview__title  preview__title--margin">Красивая дорога</h2>
             <div class="preview__number">&ndash;№4&ndash;</div>
             <p class="preview__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             <div class="preview__border"></div>
           </div>
 
-          <div class="preview">
+          <div class="preview  preview--column-width-three">
             <h2 class="preview__title  preview__title--margin">Мало туристов</h2>
             <div class="preview__number">&ndash;№5&ndash;</div>
             <p class="preview__text">Большинство едет в Гранд Каньон и толпится там.</p>
