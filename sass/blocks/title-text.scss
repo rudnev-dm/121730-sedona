@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 765px) {
   .title-block {
     position: relative;
     &--border:before  {
@@ -24,12 +24,16 @@
     }
     &__promo {
         margin: $margin--reset;
+        padding-right: 7.1%;
+        padding-left: 7.1%;
         font-size: $font-size--menu-link;
         line-height: $line-height--text;
         text-align: center;
     }
   }
 }
+
+
 
 @media (min-width: 321px) and (max-width: 1200px) {
   .title-block {

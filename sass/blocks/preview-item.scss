@@ -40,6 +40,8 @@
   }
 }
 
+
+
 @media (min-width: 325px) and (max-width: 1200px) {
   .preview-item__left--home-img {
     background-image: url(../img/page-content/features-image--home.png);
@@ -60,9 +62,8 @@
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .preview-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    // flex-direction: column;
+    // align-items: flex-end;
     &--bottom {
       margin-bottom: 41px;
     }
