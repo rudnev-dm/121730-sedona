@@ -18,12 +18,33 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .copyright {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 43px;
+    &__link {
+      display: block;
+      font-size: $font-size--reset;
+    }
+    &__link--logo {
+      margin-left: 11px;
+      width: 27px;
+      height: 34px;
+      background-image: url("../img/page-footer/copyright-logo.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 43px;
+    margin-right: 44px;
     &__link {
       display: block;
       font-size: $font-size--reset;

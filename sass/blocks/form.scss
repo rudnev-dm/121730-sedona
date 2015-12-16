@@ -122,6 +122,16 @@
       margin: $margin--reset;
       font-size: $font-size--reset;
     }
+    &__label--text-desktop {
+      display: none;
+    }
+    &__input-field[type="text"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="text"]:focus {
+      background-color: $main-color--white;
+      box-shadow: inset 0 0 0 4px $input-date--border-color;
+    }
     &__input-field[type="text"] {
       padding-top: 23px;
       padding-right: 6.25%;
@@ -288,6 +298,14 @@
       background-color: $main-color--gray;
       cursor: pointer;
     }
+    &__input-field[type="file"] + label:hover {
+      background-color: $border-color--form-block;
+      color: $color--form-image-upload-hover;
+    }
+    &__input-field[type="file"] + label:active {
+      color: $color--form-image-upload-acrive;
+      background-color: $input-radio--bg-color-checked;
+    }
     &__photo-upload-wrapper {
       display: flex;
       flex-direction: row;
@@ -320,6 +338,20 @@
       background: $main-color--gray;
       border-radius: 50%;
       transform: translateX(-15%);
+    }
+    &__photo-image--delete:hover {
+      background-color: $border-color--form-block;
+    }
+    &__photo-image--delete:hover:before,
+    &__photo-image--delete:hover:after {
+      border-color: $color--delete-image-button;
+    }
+    &__photo-image--delete:active {
+      background-color: $input-radio--bg-color-checked;
+    }
+    &__photo-image--delete:active:before,
+    &__photo-image--delete:active:after {
+      border-color: $color--delete-image-button-active;
     }
     &__photo-image--delete:before {
       position: absolute;
@@ -354,7 +386,7 @@
 
 
 
-@media (min-width: 768px) and (max-width: 2200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .form {
     position: relative;
     display: flex;
@@ -527,12 +559,22 @@
       margin-bottom: 8px;
       text-align: center;
     }
-    .form__input-field[type="checkbox"] + label.form__label--padding{
+    .form__input-field[type="checkbox"] + label.form__label--padding {
       padding-left: 37%;
     }
     &__label--width{
       width: 72%;
       margin-left: 81px;
+    }
+    &__label--text-desktop {
+      display: none;
+    }
+    &__input-field[type="text"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="text"]:focus {
+      background-color: $main-color--white;
+      box-shadow: inset 0 0 0 4px $input-date--border-color;
     }
     &__input-field[type="text"] {
       padding-top: 15px;
@@ -699,6 +741,14 @@
       background-color: $main-color--gray;
       cursor: pointer;
     }
+    &__input-field[type="file"] + label:hover {
+      background-color: $border-color--form-block;
+      color: $color--form-image-upload-hover;
+    }
+    &__input-field[type="file"] + label:active {
+      color: $color--form-image-upload-acrive;
+      background-color: $input-radio--bg-color-checked;
+    }
     &__photo-upload-wrapper {
       display: flex;
       flex-direction: row;
@@ -731,6 +781,20 @@
       border-radius: 50%;
       transform: translateX(-55%);
     }
+    &__photo-image--delete:hover {
+      background-color: $border-color--form-block;
+    }
+    &__photo-image--delete:hover:before,
+    &__photo-image--delete:hover:after {
+      border-color: $color--delete-image-button;
+    }
+    &__photo-image--delete:active {
+      background-color: $input-radio--bg-color-checked;
+    }
+    &__photo-image--delete:active:before,
+    &__photo-image--delete:active:after {
+      border-color: $color--delete-image-button-active;
+    }
     &__photo-image--delete:before {
       position: absolute;
       display: block;
@@ -762,21 +826,495 @@
   }
 }
 
-@media (min-width: 995px) and (max-width: 1200px) {
-  .form__photo-upload-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+
+
+@media (min-width: 995px) and (max-width: 1199px) {
+  .form {
+    &__photo-upload-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    &__photo-preview {
+      position: relative;
+      margin: $margin--reset;
+      margin-right: 10%;
+      margin-bottom: 35px;
+    }
+    &__photo-preview:nth-child(3n) {
+      margin-right: 10%;
+    }
+    &__photo-preview:nth-child(4) {
+      margin: $margin--reset;
+    }
   }
-  .form__photo-preview {
+}
+
+
+
+@media (min-width: 1200px) {
+  .form {
     position: relative;
-    margin: $margin--reset;
-    margin-right: 12%;
-    margin-bottom: 35px;
-  }
-  .form__photo-preview:nth-child(3n) {
-    margin-right: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    &__block {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: $margin--reset;
+      margin-bottom: 8px;
+      padding: $padding--reset;
+      padding-right: 40px;
+      padding-left: 40px;
+      border: $display-reset;
+    }
+    &__block--align {
+      justify-content: flex-start;
+    }
+    &__item {
+      width: 27.5%;
+      margin-right: 8.6%;
+    }
+    &__item--desktop-width {
+      width: 28%;
+    }
+    &__item--desktop-width-element-one {
+      width: 31%;
+      margin-right: 9%;
+    }
+    &__item--desktop-width-element-two {
+      width: 38%;
+      margin-right: 9%;
+    }
+    &__item--desktop-width-element-three {
+      width: 39%;
+    }
+    &__item:last-child {
+      margin: 0;
+    }
+    &__item--radio {
+      display: flex;
+      width: 25%;
+      margin: $margin--reset;
+      margin-right: 8.5%;
+      margin-left: 24%;
+    }
+    &__item--radio:last-child {
+      margin: 0;
+    }
+    &__mobile--text {
+      display: none;
+    }
+    &__tablet--text {
+      display: inline-block;
+    }
+    &__item--attraction {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      margin: $margin--reset;
+    }
+    &__item--padding {
+      padding-left: $padding--reset;
+    }
+    &__item--margin-reset {
+      margin: $margin--reset;
+    }
+    &__block--border:before {
+      position: absolute;
+      content: "";
+      left: 40px;
+      bottom: -48px;
+      width: 23%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__block--border:after {
+      position: absolute;
+      content: "";
+      right: 40px;
+      bottom: -48px;
+      width: 23%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__input-number {
+      position: relative;
+      display: flex;
+    }
+    &__input-number::before {
+      position: absolute;
+      content: "дн.";
+      top: 15px;
+      right: 28.8%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      text-transform: lowercase;
+      color: $main-color-input-reduction;
+      display: block;
+    }
+    &__input-human-counter {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+    }
+    &__input-human-counter::before {
+      position: absolute;
+      content: "чел.";
+      top: 15px;
+      right: 28.8%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      text-transform: lowercase;
+      color: $main-color-input-reduction;
+      display: block;
+    }
+    &__title {
+      position: relative;
+      margin: $margin--reset;
+      width: 100%;
+      font-size: $font-size--menu-link;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+    &__title--border:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 13px;
+      width: 25%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__title--border:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 13px;
+      width: 25%;
+      height: 1px;
+      background-color: $border-color--form-block;
+    }
+    &__title--margin {
+      margin-top: 26px;
+      margin-bottom: 25px;
+    }
+    &__title--margin-tablet {
+      margin-bottom: 35px;
+    }
+    &__title--wrap {
+      word-spacing: 0;
+    }
+    &__label {
+      position: relative;
+      width: 100%;
+      margin-top: 19px;
+      margin-bottom: 7px;
+      margin-left: 6.25%;
+      font-size: $font-size-medium--text;
+      line-height: $line-height--text;
+      text-align: left;
+      sup {
+        margin-left: 3px;
+        color: $main-color--sup;
+      }
+    }
+    &__label--margin {
+      margin: $margin--reset;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      margin-left: 20px;
+    }
+    &__label--margin-reset {
+      margin: $margin--reset;
+      margin-bottom: 8px;
+      margin-left: 1.25%;
+      text-align: left;
+    }
+    &__input-field[type="checkbox"] + label.form__label--padding {
+      padding-left: 14%;
+    }
+    &__label--width{
+      width: 72%;
+      margin-left: 81px;
+    }
+    &__label--text-tablet {
+      display: none;
+    }
+    &__input-field[type="text"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="text"]:focus {
+      background-color: $main-color--white;
+      box-shadow: inset 0 0 0 4px $input-date--border-color;
+    }
+    &__input-field[type="text"] {
+      padding-top: 15px;
+      padding-right: 6.25%;
+      padding-left: 6.25%;
+      padding-bottom: 15px;
+      width: 100%;
+      height: 58px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      color: $main-color--black;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__input-field[type="radio"] {
+      display: $display-reset;
+    }
+    &__input-field[type="radio"] + label {
+      position: relative;
+      padding-left: 22%;
+      vertical-align: top;
+      line-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &__input-field[type="radio"] + label:before {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      content: "";
+      top: 0;
+      left: -15px;
+      border: 15px solid $main-color--gray;
+      background-color: $main-color--gray;
+      border-radius: 50%;
+    }
+    &__input-field[type="radio"]:hover + label:before {
+      border-color: $border-color--form-block;
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="radio"]:checked + label:before {
+      background-color: $input-radio--border-color-checked;
+      border-color: $input-radio--bg-color-checked;
+    }
+    &__input-field[type="date"] {
+      width: 100%;
+      height: 58px;
+      padding-left: 6.25%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      font-weight: bold;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__input-field--box-shadow[type="date"] {
+      box-shadow: inset 0 0 0 2px $input-date--border-color;
+    }
+    &__input-field[type="number"] {
+      appearance: textfield;
+      min-width: 57%;
+      height: 58px;
+      margin-right: 1.5%;
+      margin-left: 1.5%;
+      padding-left: 4%;
+      padding-right: 10%;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      background-color: $main-color--gray;
+      border: $display-reset;
+    }
+    &__user-data {
+      @include form-user-data--block-model;
+      width: 100%;
+    }
+    &__user-data--margin {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    &__people-counter {
+      display: block;
+      min-width: 60px;
+      height: 58px;
+      margin-right: 4px;
+      padding-top: 17px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      color: $main-color--black;
+      font-weight: bold;
+      text-align: center;
+      background-color: $main-color--gray;
+    }
+    &__user-data-left {
+      display: flex;
+      flex-direction: row;
+      min-width: 60px;
+      margin-right: 0.7%;
+    }
+    &__user-data-right {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    &__people-number {
+      display: block;
+      min-width: 60px;
+      line-height: 26px;
+      text-align: center;
+    }
+    &__input-field[type="checkbox"] {
+      display: none;
+    }
+    &__input-field[type="checkbox"] + label {
+      position: relative;
+      margin: $margin--reset;
+      margin-top: 28px;
+      margin-bottom: 27px;
+      padding-left: 14%;
+      vertical-align: top;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+      font-weight: bold;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+    &__label--text-transform {
+      text-transform: none!important;
+    }
+    &__input-field[type="checkbox"] + label:before {
+      position: absolute;
+      content: "";
+      width: 56px;
+      height: 56px;
+      content: "";
+      top: -15px;
+      left: 0;
+      background-color: $main-color--gray;
+      border-radius: 5px 5px 5px 5px;
+    }
+    &__input-field[type="checkbox"]:checked + label:after {
+      position: absolute;
+      content: "";
+      top: 3px;
+      left: 18px;
+      width: 18px;
+      height: 8px;
+      border: 5px solid $input-radio--border-color-checked;
+      border-top-style: $display-reset;
+      border-right-style: $display-reset;
+      transform: rotate(-45deg);
+    }
+    &__input-field[type="checkbox"]:hover + label:before {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="checkbox"]:checked + label:before {
+      background-color: $input-radio--bg-color-checked;
+    }
+    &__block--upload {
+      position: relative;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+    &__input-field[type="file"] {
+      display: none;
+    }
+    &__input-field[type="file"] + label {
+      display: block;
+      width: 100%;
+      margin: $margin--reset;
+      margin-top: 18px;
+      padding: $padding--reset;
+      margin-bottom: 88px;
+      padding-top: 16.5px;
+      padding-bottom: 15.5px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+      color: $main-color--white;
+      background-color: $main-color--light-blue;
+      cursor: pointer;
+    }
+    &__input-field[type="file"] + label:hover {
+      background-color: $main-color--light-blue-hover;
+    }
+    &__input-field[type="file"] + label:active {
+      background-color: $main-color--light-blue-active;
+      color: $main-color--light-gray-active-text;
+    }
+    &__photo-upload-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    &__photo-preview {
+      position: relative;
+      margin: $margin--reset;
+      margin-right: 8.3%;
+      margin-bottom: 35px;
+    }
+    &__photo-preview:nth-child(5n) {
+      margin-right: $margin--reset;
+    }
+    &__photo-image {
+      width: 140px;
+      height: 140px;
+    }
+    &__photo-image--delete {
+      position: absolute;
+      top: -30px;
+      left: 100%;
+      display: block;
+      width: 61px;
+      height: 61px;
+      font-size: $font-size--reset;
+      background: $main-color--gray;
+      border-radius: 50%;
+      transform: translateX(-55%);
+    }
+    &__photo-image--delete:hover {
+      background-color: $border-color--form-block;
+    }
+    &__photo-image--delete:hover:before,
+    &__photo-image--delete:hover:after {
+      border-color: $color--delete-image-button;
+    }
+    &__photo-image--delete:active {
+      background-color: $input-radio--bg-color-checked;
+    }
+    &__photo-image--delete:active:before,
+    &__photo-image--delete:active:after {
+      border-color: $color--delete-image-button-active;
+    }
+    &__photo-image--delete:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 3px;
+      left: 5px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $main-color-button--light-gray;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+    &__photo-image--delete:after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 25px;
+      left: 5px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $main-color-button--light-gray;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(-45deg);
+    }
   }
 }

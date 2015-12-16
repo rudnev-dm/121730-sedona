@@ -69,6 +69,8 @@
   }
 }
 
+
+
 @media (min-width: 460px) and (max-width: 1200px){
   .logo::after {
     position: absolute;
@@ -115,12 +117,12 @@
 
 
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .logo {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 391px;
+    height: 512px;
     text-align: center;
     background-image: url("../img/page-header/bg-header.jpg");
     background-repeat: no-repeat;
@@ -169,7 +171,64 @@
       background-image: url("../img/page-header/bg-header--middle-text--small.png");
       background-repeat: no-repeat;
       background-position: center;
-      display: none;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 508px;
+    text-align: center;
+    background-image: url("../img/page-header/bg-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -5;
+    &--mini {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 301px;
+      text-align: center;
+      background-image: url("../img/page-header/bg-header--form-page.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: -5;
+    }
+    &__image-top {
+      align-self: center;
+      width: 196px;
+      height: 66px;
+      margin-top: 47px;
+      background-image: url("../img/page-header/bg-header--top-text.png");
+      background-repeat: no-repeat;
+    }
+    &__image-middle {
+      align-self: center;
+      width: 280px;
+      height: 48px;
+      margin-top: 60px;
+      background-image: url("../img/page-header/bg-header--middle-text.png");
+      background-repeat: no-repeat;
+    }
+    &__image-bottom {
+      align-self: center;
+      width: 197px;
+      height: 54px;
+      margin-top: 70px;
+      background-image: url("../img/page-header/bg-header--bottom-text.png");
+      background-repeat: no-repeat;
+    }
+    &__image-middle--small {
+      align-self: center;
+      width: 280px;
+      height: 48px;
+      margin-top: 60px;
+      background-image: url("../img/page-header/bg-header--middle-text--small.png");
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }

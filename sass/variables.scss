@@ -6,6 +6,11 @@ $max-width--medium: 1200px;
 //Color palette
 //------------------------------
 $main-color--light-blue: #81b3d2;
+$main-color--light-blue-hover: #669ec0;
+$main-color--light-blue-active: #5496bd;
+$main-color--light-gray--button-active: #88b6d1;
+$main-color--light-gray-active-text: #94b9d2;
+$main-color--light-gray-active-menu: #cecece;
 $main-color--white: #ffffff;
 $main-color--black: #000000;
 $main-color--gray: #f2f2f2;
@@ -16,11 +21,18 @@ $main-color--sup: #ff0000;
 $border-color--menu-item: #678fa8;
 $border-color--form-block: #e5e5e5;
 $input-date--border-color: #b8b8b8;
+$input-radio--bg-color-checked: #d5d5d5;
+$input-radio--border-color-checked: #a4a4a4;
+$color--delete-image-button: #8c8c8c;
+$color--delete-image-button-active: #c4c4c4;
+$color--form-image-upload-hover: #333333;
+$color--form-image-upload-acrive: #afafaf;
 
 //------------------------------
 //Typography
 //------------------------------
 
+$font-size-large--title: 30px;
 $font-size-large--button: 21px;
 $font-size-responsive: 20px;
 $font-size--menu-link: 18px;

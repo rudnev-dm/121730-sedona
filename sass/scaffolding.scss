@@ -24,6 +24,22 @@ img {
   outline: none;
 }
 
+.form__input-field:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+.form__input-field:focus::-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+.form__input-field:focus:-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.3s ease;
+}
+.form__input-field:focus:-ms-input-placeholder {
+  text-indent: 500px; transition: text-indent 0.3s ease;
+}
+
 input[type="text"],
 input[type="date"],
 input[type="number"] {

@@ -13,6 +13,15 @@
       border-bottom: 1px solid #678fa8;
       background-color: $main-color--light-blue;
     }
+    &__item:hover {
+      background-color: $main-color--light-blue-hover;
+    }
+    &__item:active {
+      background-color: $main-color--light-blue-active;
+    }
+    &__item:active .menu__link{
+      color: $main-color--light-gray-active-text;
+    }
     &__button-menu--close {
       position: absolute;
       top: 17px;
@@ -47,7 +56,7 @@
 
 
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .menu {
     width: auto;
     &__list {
@@ -61,6 +70,69 @@
       text-align: center;
       background-color: $main-color--white;
       width: 20%;
+    }
+    &__item:hover .menu__link {
+      color: $main-color--light-blue;
+    }
+    &__item:active .menu__link {
+      color: $main-color--light-gray-active-menu;
+    }
+    &__item:nth-child(2) {
+      margin-right: 20%;
+    }
+    &__button-menu--close {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      width: 23px;
+      height: 22px;
+      font-size: $font-size--reset;
+      border: none;
+      background-color: transparent;
+      background-image: url("../img/page-header--menu/menu-button--close.png");
+      background-repeat: no-repeat;
+      display: none;
+    }
+    &__item:last-child {
+      border: none;
+      background-image: none;
+    }
+    &__link {
+      display: block;
+      padding-top: 8px;
+      padding-bottom: 7px;
+      font-size: $font-size-medium--text;
+      line-height: $line-height-menu--link;
+      text-align: center;
+      font-weight: bold;
+      color: $main-color--black;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu {
+    width: auto;
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+    }
+    &__item {
+      position: relative;
+      text-align: center;
+      background-color: $main-color--white;
+      width: 20%;
+    }
+    &__item:hover .menu__link {
+      color: $main-color--light-blue;
+    }
+    &__item:active .menu__link {
+      color: $main-color--light-gray-active-menu;
+    }
+    &__item:nth-child(2) {
+      margin-right: 20%;
     }
     &__item:nth-child(2) {
       margin-right: 20%;
