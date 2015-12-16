@@ -12,8 +12,11 @@
 <body>
 
   <div class="wrapper">
+
     <header class="page-header">
+
       <nav class="menu">
+
         <div class="menu-container">
           <a class="menu-container__logo-link" href="index.html" title="Перейти на главную страницу">
             <img class="menu-container__logo-image" src="./img/page-header/logo.png" width="138" height="70" alt="Логотип компании">
@@ -41,8 +44,6 @@
 
       <div class="title-block ">
 
-
-
         <div class="logo logo--mini">
           <div class="logo__image-middle  logo__image-middle--small"></div>
         </div>
@@ -61,6 +62,7 @@
 
 
     <main class="page-content">
+
       <form class="form" action="form-reference.php" method="get">
 
         <div class="form__block  form__block--border">
@@ -70,10 +72,12 @@
             <label class="form__label" for="surname">Фамилия:<sup>&lowast;</sup></label>
             <input class="form__input-field" type="text" id="surname" name="surname" placeholder="Иванов" autofocus required>
           </div>
+
           <div class="form__item">
             <label class="form__label" for="name">Имя:<sup>&lowast;</sup></label>
             <input class="form__input-field" type="text" id="name" name="name" placeholder="Петр" required>
           </div>
+
           <div class="form__item">
             <label class="form__label" for="patronymic">Отчество:<sup>&lowast;</sup></label>
             <input class="form__input-field" type="text" id="patronymic" name="patronymic" placeholder="Александрович" required>
@@ -127,7 +131,7 @@
         <div class="form__block  form__block--align form__block--border">
           <h2 class="form__title  form__title--margin">Кол&ndash;во путешественников:</h2>
           <label class="form__label  form__label--margin-reset" for="quantity-people">Количество путешественников:<sup>&lowast;</sup></label>
-          <div class="form__item  form__item--margin-reset">
+          <div class="form__item  form__item--desktop-width  form__item--margin-reset">
             <div class="form__input-human-counter">
               <button class="form__input-button--left" type="button" name="Минус один день" value="Плюс один день"></button>
 
@@ -150,17 +154,17 @@
 
             <div class="form__user-data-right">
 
-              <div class="form__item  form__item--margin-tablet">
+              <div class="form__item  form__item--margin-tablet  form__item--desktop-width-element-one">
                 <label class="form__label form__label--margin" for="traveler-surname">Фамилия:<sup>&lowast;</sup></label>
                 <input class="form__input-field  form__input-field--user" type="text" id="traveler-surname" name="traveler-surname" placeholder="Иванов" required>
               </div>
 
-              <div class="form__item  form__item--margin-tablet">
+              <div class="form__item  form__item--margin-tablet  form__item--desktop-width-element-two">
                 <label class="form__label form__label--margin" for="traveler-name">Имя:<sup>&lowast;</sup></label>
                 <input class="form__input-field  form__input-field--user" type="text" id="traveler-name" name="traveler-name" placeholder="Петр" required>
               </div>
 
-              <div class="form__item  form__item--margin-tablet">
+              <div class="form__item  form__item--margin-tablet  form__item--desktop-width-element-three">
                 <label class="form__label  form__label--margin" for="traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
                 <input class="form__input-field  form__input-field--user" type="text" id="traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
               </div>
@@ -178,17 +182,17 @@
 
             <div class="form__user-data-right">
 
-              <div class="form__item  form__item--margin-tablet">
+              <div class="form__item  form__item--margin-tablet  form__item--desktop-width-element-one">
                 <label class="form__label  form__label--margin" for="second-traveler-surname">Фамилия:<sup>&lowast;</sup></label>
                 <input class="form__input-field  form__input-field--user" type="text" id="second-traveler-surname" name="traveler-surname" placeholder="Иванов" required>
               </div>
 
-              <div class="form__item  form__item--margin-tablet">
+              <div class="form__item  form__item--margin-tablet  form__item--desktop-width-element-two">
                 <label class="form__label  form__label--margin" for="second-traveler-name">Имя:<sup>&lowast;</sup></label>
                 <input class="form__input-field  form__input-field--user" type="text" id="second-traveler-name" name="traveler-name" placeholder="Петр" required>
               </div>
 
-              <div class="form__item  form__item--margin-tablet">
+              <div class="form__item  form__item--margin-tablet  form__item--desktop-width-element-three">
                 <label class="form__label  form__label--margin" for="second-traveler-patronymic">Отчество:<sup>&lowast;</sup></label>
                 <input class="form__input-field  form__input-field--user" type="text" id="second-traveler-patronymic" name="traveler-patronymic" placeholder="Александрович" required>
               </div>
@@ -226,7 +230,7 @@
           <h2 class="form__title  form__title--margin">Зугрузите фотографии:</h2>
 
           <input class="form__input-field" type="file" id="choose-file" name="choose-file" multiple>
-          <label class="form__label" for="choose-file">Выбрать фотографии</label>
+          <label class="form__label" for="choose-file"><span class="form__label--text-tablet">Выбрать фотографии</span><span class="form__label--text-desktop">Перетащите фотографии сюда</span> </label>
 
           <div class="form__photo-upload-wrapper">
             <figure class="form__photo-preview">
