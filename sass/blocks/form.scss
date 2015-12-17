@@ -130,7 +130,7 @@
     }
     &__input-field[type="text"]:focus {
       background-color: $main-color--white;
-      box-shadow: inset 0 0 0 4px $input-date--border-color;
+      border: 4px solid $input-date--border-color;
     }
     &__input-field[type="text"] {
       padding-top: 23px;
@@ -167,7 +167,16 @@
       background-color: $main-color--gray;
       border-radius: 50%;
     }
+    &__input-field[type="radio"]:hover + label:before {
+      border-color: $border-color--form-block;
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="radio"]:active + label:before {
+      border-color: $input-radio--bg-color-checked;
+      background-color: $input-radio--border-color-checked;
+    }
     &__input-field[type="radio"]:checked + label:before {
+      border: 15px solid $main-color--gray;
       background-color: $main-color--black;
     }
     &__item--button {
@@ -185,7 +194,14 @@
       border: $display-reset;
     }
     &__input-field--box-shadow[type="date"] {
-      box-shadow: inset 0 0 0 2px $input-date--border-color;
+      border: 2px solid $input-date--border-color;
+    }
+    &__input-field[type="date"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="date"]:focus {
+	    background-color: $main-color--white;
+	    border: 4px solid $input-date--border-color;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -200,6 +216,13 @@
       background-color: $main-color--gray;
       border: $display-reset;
     }
+    &__input-field[type="number"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="number"]:focus {
+      background-color: $main-color--white;
+      border: 4px solid $input-date--border-color;
+    }
     &__user-data {
       @include form-user-data--block-model;
     }
@@ -207,7 +230,6 @@
       display: block;
       min-width: 60px;
       height: 58px;
-      margin-right: 4px;
       padding-top: 17px;
       font-size: $font-size--menu-link;
       line-height: $line-height--text;
@@ -220,7 +242,7 @@
       display: flex;
       flex-direction: column;
       min-width: 60px;
-      margin-right: 1.25%;
+      margin-right: 4px;
     }
     &__user-data-right {
       display: flex;
@@ -263,7 +285,7 @@
       background-color: $main-color--gray;
       border-radius: 5px 5px 5px 5px;
     }
-    &__input-field[type="checkbox"]:checked + label::after {
+    &__input-field[type="checkbox"]:checked + label:after {
       position: absolute;
       content: "";
       top: 3px;
@@ -274,6 +296,12 @@
       border-top-style: $display-reset;
       border-right-style: $display-reset;
       transform: rotate(-45deg);
+    }
+    &__input-field[type="checkbox"]:hover + label:before {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="checkbox"]:active + label:after {
+      border-color: $input-radio--border-color-checked;
     }
     &__block--upload {
       position: relative;
@@ -574,7 +602,7 @@
     }
     &__input-field[type="text"]:focus {
       background-color: $main-color--white;
-      box-shadow: inset 0 0 0 4px $input-date--border-color;
+      border: 4px solid $input-date--border-color;
     }
     &__input-field[type="text"] {
       padding-top: 15px;
@@ -611,7 +639,16 @@
       background-color: $main-color--gray;
       border-radius: 50%;
     }
+    &__input-field[type="radio"]:hover + label:before {
+      border-color: $border-color--form-block;
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="radio"]:active + label:before {
+      border-color: $input-radio--bg-color-checked;
+      background-color: $input-radio--border-color-checked;
+    }
     &__input-field[type="radio"]:checked + label:before {
+      border: 15px solid $main-color--gray;
       background-color: $main-color--black;
     }
     &__input-field[type="date"] {
@@ -625,7 +662,14 @@
       border: $display-reset;
     }
     &__input-field--box-shadow[type="date"] {
-      box-shadow: inset 0 0 0 2px $input-date--border-color;
+      border: 2px solid $input-date--border-color;
+    }
+    &__input-field[type="date"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="date"]:focus {
+	    background-color: $main-color--white;
+	    border: 4px solid $input-date--border-color;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -637,6 +681,13 @@
       line-height: $line-height--text;
       background-color: $main-color--gray;
       border: $display-reset;
+    }
+    &__input-field[type="number"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="number"]:focus {
+      background-color: $main-color--white;
+      border: 4px solid $input-date--border-color;
     }
     &__user-data {
       @include form-user-data--block-model;
@@ -705,7 +756,7 @@
       background-color: $main-color--gray;
       border-radius: 5px 5px 5px 5px;
     }
-    &__input-field[type="checkbox"]:checked + label::after {
+    &__input-field[type="checkbox"]:checked + label:after {
       position: absolute;
       content: "";
       top: 3px;
@@ -716,6 +767,12 @@
       border-top-style: $display-reset;
       border-right-style: $display-reset;
       transform: rotate(-45deg);
+    }
+    &__input-field[type="checkbox"]:hover + label:before {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="checkbox"]:active + label:after {
+      border-color: $input-radio--border-color-checked;
     }
     &__block--upload {
       position: relative;
@@ -870,30 +927,30 @@
       margin: $margin--reset;
       margin-bottom: 8px;
       padding: $padding--reset;
-      padding-right: 40px;
-      padding-left: 40px;
+      padding-right: 102px;
+      padding-left: 102px;
       border: $display-reset;
     }
     &__block--align {
       justify-content: flex-start;
     }
     &__item {
-      width: 27.5%;
-      margin-right: 8.6%;
+      width: 29%;
+      margin-right: 61px;
     }
     &__item--desktop-width {
-      width: 28%;
+      width: 29%;
     }
     &__item--desktop-width-element-one {
-      width: 31%;
-      margin-right: 9%;
+      width: 211px;
+      margin-right: 62px;
     }
     &__item--desktop-width-element-two {
-      width: 38%;
-      margin-right: 9%;
+      width: 278px;
+      margin-right: 62px;
     }
     &__item--desktop-width-element-three {
-      width: 39%;
+      width: 278px;
     }
     &__item:last-child {
       margin: 0;
@@ -929,18 +986,18 @@
     &__block--border:before {
       position: absolute;
       content: "";
-      left: 40px;
+      left: 103px;
       bottom: -48px;
-      width: 23%;
+      width: 24%;
       height: 1px;
       background-color: $border-color--form-block;
     }
     &__block--border:after {
       position: absolute;
       content: "";
-      right: 40px;
+      right: 103px;
       bottom: -48px;
-      width: 23%;
+      width: 24%;
       height: 1px;
       background-color: $border-color--form-block;
     }
@@ -989,7 +1046,7 @@
       content: "";
       left: 0;
       bottom: 13px;
-      width: 25%;
+      width: 29%;
       height: 1px;
       background-color: $border-color--form-block;
     }
@@ -998,7 +1055,7 @@
       content: "";
       right: 0;
       bottom: 13px;
-      width: 25%;
+      width: 29%;
       height: 1px;
       background-color: $border-color--form-block;
     }
@@ -1053,12 +1110,12 @@
     }
     &__input-field[type="text"]:focus {
       background-color: $main-color--white;
-      box-shadow: inset 0 0 0 4px $input-date--border-color;
+      border: 4px solid $input-date--border-color;
     }
     &__input-field[type="text"] {
       padding-top: 15px;
-      padding-right: 6.25%;
-      padding-left: 6.25%;
+      padding-right: 6px;
+      padding-left: 22px;
       padding-bottom: 15px;
       width: 100%;
       height: 58px;
@@ -1094,9 +1151,13 @@
       border-color: $border-color--form-block;
       background-color: $border-color--form-block;
     }
-    &__input-field[type="radio"]:checked + label:before {
-      background-color: $input-radio--border-color-checked;
+    &__input-field[type="radio"]:active + label:before {
       border-color: $input-radio--bg-color-checked;
+      background-color: $input-radio--border-color-checked;
+    }
+    &__input-field[type="radio"]:checked + label:before {
+      border: 15px solid $main-color--gray;
+      background-color: $main-color--black;
     }
     &__input-field[type="date"] {
       width: 100%;
@@ -1109,20 +1170,34 @@
       border: $display-reset;
     }
     &__input-field--box-shadow[type="date"] {
-      box-shadow: inset 0 0 0 2px $input-date--border-color;
+      border: 2px solid $input-date--border-color;
+    }
+    &__input-field[type="date"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="date"]:focus {
+	    background-color: $main-color--white;
+	    border: 4px solid $input-date--border-color;
     }
     &__input-field[type="number"] {
       appearance: textfield;
-      min-width: 57%;
+      min-width: 52%;
       height: 58px;
-      margin-right: 1.5%;
-      margin-left: 1.5%;
+      margin-right: 6px;
+      margin-left: 6px;
       padding-left: 4%;
       padding-right: 10%;
       font-size: $font-size--menu-link;
       line-height: $line-height--text;
       background-color: $main-color--gray;
       border: $display-reset;
+    }
+    &__input-field[type="number"]:hover {
+      background-color: $border-color--form-block;
+    }
+    &__input-field[type="number"]:focus {
+	    background-color: $main-color--white;
+	    border: 4px solid $input-date--border-color;
     }
     &__user-data {
       @include form-user-data--block-model;
@@ -1199,7 +1274,7 @@
       left: 18px;
       width: 18px;
       height: 8px;
-      border: 5px solid $input-radio--border-color-checked;
+      border: 5px solid $main-color--black;
       border-top-style: $display-reset;
       border-right-style: $display-reset;
       transform: rotate(-45deg);
@@ -1207,8 +1282,8 @@
     &__input-field[type="checkbox"]:hover + label:before {
       background-color: $border-color--form-block;
     }
-    &__input-field[type="checkbox"]:checked + label:before {
-      background-color: $input-radio--bg-color-checked;
+    &__input-field[type="checkbox"]:active + label:after {
+      border-color: $input-radio--border-color-checked;
     }
     &__block--upload {
       position: relative;
@@ -1252,7 +1327,7 @@
     &__photo-preview {
       position: relative;
       margin: $margin--reset;
-      margin-right: 8.3%;
+      margin-right: 6.3%;
       margin-bottom: 35px;
     }
     &__photo-preview:nth-child(5n) {

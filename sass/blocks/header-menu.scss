@@ -33,6 +33,7 @@
       background-color: transparent;
       background-image: url("../img/page-header--menu/menu-button--close.png");
       background-repeat: no-repeat;
+      z-index: 10;
     }
     &__item:last-child {
       border: none;
@@ -51,9 +52,22 @@
       font-weight: bold;
       color: $main-color--white;
     }
+    &--close {
+      display: none;
+    }
+    &--show {
+      display: block;
+      animation: bouncestart 0.8s;
+    }
   }
 }
 
+@keyframes bouncestart {
+    0% { transform: translateY(-223px); }
+    70% { transform: translateY(30px); }
+    90% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+}
 
 
 @media (min-width: 768px) and (max-width: 1199px) {

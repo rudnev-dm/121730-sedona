@@ -71,7 +71,9 @@
   }
 }
 
-@media (min-width: 1200px) {
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .title-block {
     position: relative;
     &--border:before  {
@@ -86,11 +88,34 @@
       background-repeat: no-repeat;
       background-position: center;
       z-index: 10;
-      display: none;
     }
   }
   .title-text {
-    margin-top: 37px;
+    margin-top: 57px;
+    margin-bottom: 29px;
+    &--margin {
+      margin-top: 69px;
+      margin-bottom: 26px;
+    }
+    &__promo {
+        margin: $margin--reset;
+        padding-right: 18.1%;
+        padding-left: 18.1%;
+        font-size: $font-size--menu-link;
+        line-height: $line-height--text;
+        text-align: center;
+    }
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+  .title-block {
+    position: relative;
+  }
+  .title-text {
+    margin-top: 59px;
     margin-bottom: 29px;
     &--margin {
       margin-top: 69px;

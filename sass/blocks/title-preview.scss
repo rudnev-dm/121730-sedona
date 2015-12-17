@@ -10,3 +10,36 @@
       text-align: center;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .title-preview {
+    padding-right: 6.25%;
+    padding-left: 6.25%;
+    text-align: center;
+    &__text {
+        margin: $margin--reset;
+        margin-bottom: 48px;
+        font-size: $font-size-medium--text;
+        line-height: $line-height--text;
+        text-align: center;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .title-preview {
+    padding-right: 6.25%;
+    padding-left: 6.25%;
+    text-align: center;
+    &__text {
+        margin: $margin--reset;
+        margin-bottom: 47px;
+        padding-right: 28.5%;
+        padding-left: 28.5%;
+        font-size: $font-size-medium--text;
+        line-height: $line-height--text;
+        text-align: center;
+    }
+  }
+}

@@ -1,31 +1,143 @@
-.success-popup {
-  position: absolute;
-  bottom: -20px;
-  left: 0;
+@media (min-width: 320px) and (max-width: 767px) {
+  .success-popup {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 323px;
+    text-align: center;
+    background-color: $main-color--white;
+    box-shadow: 0 5px 10px 0 $main-color--gray;
+    z-index: 10;
+    display: block;
+    &__title {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      font-size: $font-size--menu-link;
+      line-height: $line-height--text;
+    }
+    &__text {
+      margin: $margin--reset;
+      margin-bottom: 35px;
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    &__button-wrapper {
+      padding-top: 20px;
+      padding-right: 6%;
+      padding-bottom: 20px;
+      padding-left: 6%;
+      background-color: $main-color--gray;
+    }
+  }
+}
+
+.popup-btn--success:hover {
+  background-color: $main-color--light-blue-hover;
+}
+
+.popup-btn--success:active {
+  color: $main-color--light-gray--button-active;
+  background-color: $main-color--light-blue-active;
+}
+
+.popup-btn {
+  display: block;
   width: 100%;
-  height: 323px;
+  margin-bottom: 50px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: $font-size-large--button;
+  line-height: $line-height--text;
+  font-weight: bold;
+  color: $main-color--white;
   text-align: center;
-  background-color: $main-color--white;
-  box-shadow: 0 5px 10px 0 $main-color--gray;
-  z-index: 10;
-  display: none;
-  &__title {
-    margin-top: 45px;
-    margin-bottom: 45px;
-    font-size: $font-size--menu-link;
-    line-height: $line-height--text;
-  }
-  &__text {
+  text-transform: uppercase;
+  background-color: $main-color--light-blue;
+  border: none;
+  &--success {
+    display: block;
+    width: 100%;
     margin: $margin--reset;
-    margin-bottom: 35px;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: $font-size-large--button;
+    line-height: $line-height--text;
+    font-weight: bold;
+    color: $main-color--white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $main-color--light-blue;
+    border: none;
   }
-  &__button-wrapper {
-    padding-top: 20px;
-    padding-right: 6%;
-    padding-bottom: 20px;
-    padding-left: 6%;
-    background-color: $main-color--gray;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .success-popup {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -320px;
+    width: 640px;
+    height: 323px;
+    text-align: center;
+    background-color: $main-color--white;
+    box-shadow: 0 5px 10px 0 #696868;
+    z-index: 10;
+    display: none;
+    &__title {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      font-size: $font-size-large--title;
+      line-height: 35px;
+    }
+    &__text {
+      margin: $margin--reset;
+      margin-bottom: 35px;
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    &__button-wrapper {
+      padding-top: 20px;
+      padding-right: 6%;
+      padding-bottom: 20px;
+      padding-left: 6%;
+      background-color: $main-color--gray;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .success-popup {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -320px;
+    width: 640px;
+    height: 323px;
+    text-align: center;
+    background-color: $main-color--white;
+    box-shadow: 0 5px 10px 0 #696868;
+    z-index: 10;
+    display: none;
+    &__title {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      font-size: $font-size-large--title;
+      line-height: 35px;
+    }
+    &__text {
+      margin: $margin--reset;
+      margin-bottom: 35px;
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    &__button-wrapper {
+      padding-top: 20px;
+      padding-right: 6%;
+      padding-bottom: 20px;
+      padding-left: 6%;
+      background-color: $main-color--gray;
+    }
   }
 }

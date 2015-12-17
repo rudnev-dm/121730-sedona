@@ -1,24 +1,54 @@
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .logo {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 391px;
     text-align: center;
-    background-image: url("../img/page-header/bg-header.jpg");
+    background-image: url("../img/photo-background@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 320px auto;
+    background-position: 50% 0;
     z-index: -5;
     &--mini {
       position: relative;
       display: flex;
       flex-direction: column;
-      height: 159px;
       text-align: center;
-      background-image: url("../img/page-header/bg-header--form-page.jpg");
+      background-image: url("../img/photo-background@1x.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 320px auto;
+      background-position: 52% 42%;
       z-index: -5;
+    }
+    &__image-middle--form {
+      width: 173px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      fill: $main-color--white;
+    }
+    &__image-top {
+      align-self: center;
+      width: 144px;
+      margin-top: 47px;
+      fill: $main-color--light-blue;
+    }
+    &__image-top--second {
+      align-self: center;
+      width: 196px;
+      margin-bottom: 45px;
+      fill: $color--logo-brown;
+    }
+    &__image-middle {
+      align-self: center;
+      width: 280px;
+      margin-bottom: 55px;
+      fill: $main-color--white;
+    }
+    &__image-bottom {
+      align-self: center;
+      width: 186px;
+      fill: $main-color--white;
+      margin-bottom: 40px;
     }
     &:before {
       position: absolute;
@@ -31,47 +61,35 @@
       background-image: url("../img/page-header/header--border-image.png");
       background-repeat: no-repeat;
       background-position: center;
-  }
-    &__image-top {
-      align-self: center;
-      width: 196px;
-      height: 66px;
-      margin-top: 47px;
-      background-image: url("../img/page-header/bg-header--top-text.png");
-      background-repeat: no-repeat;
-    }
-    &__image-middle {
-      align-self: center;
-      width: 280px;
-      height: 48px;
-      margin-top: 60px;
-      background-image: url("../img/page-header/bg-header--middle-text.png");
-      background-repeat: no-repeat;
-    }
-    &__image-bottom {
-      align-self: center;
-      width: 197px;
-      height: 54px;
-      margin-top: 70px;
-      background-image: url("../img/page-header/bg-header--bottom-text.png");
-      background-repeat: no-repeat;
-    }
-    &__image-middle--small {
-      align-self: center;
-      width: 280px;
-      height: 48px;
-      margin-top: 60px;
-      background-image: url("../img/page-header/bg-header--middle-text--small.png");
-      background-repeat: no-repeat;
-      background-position: center;
-
     }
   }
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url("../img/page-header/bg-header--tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: 768px auto;
+  }
+  // &--mini {
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   text-align: center;
+  //   background-image: url("../img/page-header/bg-header--form-page-tablet.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: 768px auto;
+  //   z-index: -5;
+  // }
+}
 
 
-@media (min-width: 460px) and (max-width: 1200px){
+
+@media (min-width: 460px) and (max-width: 767px) {
   .logo::after {
     position: absolute;
     display: block;
@@ -89,144 +107,198 @@
 
 
 @media (min-width: 768px) {
-  .logo:after {
-    position: absolute;
-    display: block;
-    content: "";
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 61px;
-    background-image: url("../img/page-header/header--xl-border-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .logo--mini:after {
-    position: absolute;
-    display: block;
-    content: "";
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 61px;
-    background-image: url("../img/page-header/header--xl-border-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-
-
-@media (min-width: 768px) and (max-width: 1199px) {
   .logo {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 512px;
     text-align: center;
-    background-image: url("../img/page-header/bg-header.jpg");
+    background-image: url("../img/photo-background@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 1200px auto;
+    background-position: 50% 0;
     z-index: -5;
     &--mini {
       position: relative;
       display: flex;
       flex-direction: column;
-      height: 290px;
       text-align: center;
-      background-image: url("../img/page-header/bg-header--form-page.jpg");
+      background-image: url("../img/photo-background@1x.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 1200px auto;
+      background-position: 50% 56%;
       z-index: -5;
+    }
+    &__image-middle--form {
+      width: 546px;
+      margin-top: 104px;
+      margin-bottom: 113px;
+      fill: $main-color--white;
     }
     &__image-top {
       align-self: center;
-      width: 196px;
-      height: 66px;
-      margin-top: 47px;
-      background-image: url("../img/page-header/bg-header--top-text.png");
-      background-repeat: no-repeat;
+      width: 189px;
+      margin-top: 76px;
+      fill: $main-color--light-blue;
+    }
+    &__image-top--second {
+      align-self: center;
+      width: 256px;
+      margin-top: 13px;
+      margin-bottom: 51px;
+      fill: $color--logo-brown;
     }
     &__image-middle {
       align-self: center;
-      width: 280px;
-      height: 48px;
-      margin-top: 60px;
-      background-image: url("../img/page-header/bg-header--middle-text.png");
-      background-repeat: no-repeat;
+      width: 459px;
+      margin-bottom: 55px;
+      fill: $main-color--white;
     }
     &__image-bottom {
       align-self: center;
-      width: 197px;
-      height: 54px;
-      margin-top: 70px;
-      background-image: url("../img/page-header/bg-header--bottom-text.png");
-      background-repeat: no-repeat;
+      width: 297px;
+      fill: $main-color--white;
+      margin-bottom: 84px;
     }
-    &__image-middle--small {
-      align-self: center;
-      width: 280px;
-      height: 48px;
-      margin-top: 60px;
-      background-image: url("../img/page-header/bg-header--middle-text--small.png");
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 37px;
+      background-image: url("../img/page-header/header--large-border-image.png");
       background-repeat: no-repeat;
       background-position: center;
     }
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 770px) {
   .logo {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 508px;
     text-align: center;
-    background-image: url("../img/page-header/bg-header.jpg");
+    background-image: url("../img/photo-background@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 1200px auto;
+    background-position: 53% -94px;
     z-index: -5;
     &--mini {
       position: relative;
       display: flex;
       flex-direction: column;
-      height: 301px;
       text-align: center;
-      background-image: url("../img/page-header/bg-header--form-page.jpg");
+      background-image: url("../img/photo-background@1x.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 1200px auto;
+      background-position: 50% 56%;
       z-index: -5;
     }
     &__image-top {
       align-self: center;
-      width: 196px;
-      height: 66px;
-      margin-top: 47px;
-      background-image: url("../img/page-header/bg-header--top-text.png");
-      background-repeat: no-repeat;
+      width: 189px;
+      margin-top: 76px;
+      fill: $main-color--light-blue;
+    }
+    &__image-top--second {
+      align-self: center;
+      width: 256px;
+      margin-top: 13px;
+      margin-bottom: 51px;
+      fill: $color--logo-brown;
     }
     &__image-middle {
       align-self: center;
-      width: 280px;
-      height: 48px;
-      margin-top: 60px;
-      background-image: url("../img/page-header/bg-header--middle-text.png");
-      background-repeat: no-repeat;
+      width: 459px;
+      margin-bottom: 55px;
+      fill: $main-color--white;
     }
     &__image-bottom {
       align-self: center;
-      width: 197px;
-      height: 54px;
-      margin-top: 70px;
-      background-image: url("../img/page-header/bg-header--bottom-text.png");
-      background-repeat: no-repeat;
+      width: 297px;
+      fill: $main-color--white;
+      margin-bottom: 84px;
     }
-    &__image-middle--small {
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 56px;
+      background-image: url("../img/page-header/header--xl-border-image.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url("../img/photo-background@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 1200px auto;
+    background-position: 50% -84px;
+    z-index: -5;
+    &--mini {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-image: url("../img/photo-background@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 1200px auto;
+      background-position: 50% 65%;
+      z-index: -5;
+    }
+    &__image-middle--form {
+      width: 454px;
+      margin-top: 104px;
+      margin-bottom: 121px;
+      fill: $main-color--white;
+    }
+    &__image-top {
       align-self: center;
-      width: 280px;
-      height: 48px;
-      margin-top: 60px;
-      background-image: url("../img/page-header/bg-header--middle-text--small.png");
+      width: 189px;
+      margin-top: 76px;
+      fill: $main-color--light-blue;
+    }
+    &__image-top--second {
+      align-self: center;
+      width: 256px;
+      margin-top: 13px;
+      margin-bottom: 51px;
+      fill: $color--logo-brown;
+    }
+    &__image-middle {
+      align-self: center;
+      width: 459px;
+      margin-bottom: 55px;
+      fill: $main-color--white;
+    }
+    &__image-bottom {
+      align-self: center;
+      width: 297px;
+      fill: $main-color--white;
+      margin-bottom: 84px;
+    }
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 56px;
+      background-image: url("../img/page-header/header--xl-border-image.png");
       background-repeat: no-repeat;
       background-position: center;
     }
