@@ -200,8 +200,8 @@
       background-color: $border-color--form-block;
     }
     &__input-field[type="date"]:focus {
-	    background-color: $main-color--white;
-	    border: 4px solid $input-date--border-color;
+      background-color: $main-color--white;
+      border: 4px solid $input-date--border-color;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -668,8 +668,8 @@
       background-color: $border-color--form-block;
     }
     &__input-field[type="date"]:focus {
-	    background-color: $main-color--white;
-	    border: 4px solid $input-date--border-color;
+      background-color: $main-color--white;
+      border: 4px solid $input-date--border-color;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -1176,8 +1176,8 @@
       background-color: $border-color--form-block;
     }
     &__input-field[type="date"]:focus {
-	    background-color: $main-color--white;
-	    border: 4px solid $input-date--border-color;
+      background-color: $main-color--white;
+      border: 4px solid $input-date--border-color;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -1196,8 +1196,8 @@
       background-color: $border-color--form-block;
     }
     &__input-field[type="number"]:focus {
-	    background-color: $main-color--white;
-	    border: 4px solid $input-date--border-color;
+      background-color: $main-color--white;
+      border: 4px solid $input-date--border-color;
     }
     &__user-data {
       @include form-user-data--block-model;
