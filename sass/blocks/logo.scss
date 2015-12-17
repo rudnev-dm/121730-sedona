@@ -1,3 +1,12 @@
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .logo{
+    background-image: url("../img/photo-background@2x.jpg");
+    &--mini{
+      background-image: url("../img/photo-background@2x.jpg");
+    }
+  }
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .logo {
     position: relative;
@@ -75,16 +84,6 @@
     background-repeat: no-repeat;
     background-size: 768px auto;
   }
-  // &--mini {
-  //   position: relative;
-  //   display: flex;
-  //   flex-direction: column;
-  //   text-align: center;
-  //   background-image: url("../img/page-header/bg-header--form-page-tablet.jpg");
-  //   background-repeat: no-repeat;
-  //   background-size: 768px auto;
-  //   z-index: -5;
-  // }
 }
 
 
