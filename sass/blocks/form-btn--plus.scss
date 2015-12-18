@@ -8,3 +8,9 @@
   background-position: center;
   border: $display-reset;
 }
+.form__input-button--right:hover {
+  background-color: $border-color--form-block;
+}
+.form__input-button--right:active {
+  background-color: $input-radio--bg-color-checked;
+}

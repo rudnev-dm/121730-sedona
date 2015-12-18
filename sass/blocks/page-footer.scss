@@ -1,9 +1,46 @@
-.page-footer {
-  &__title {
-    margin-top: 39px;
-    margin-bottom: 40px;
-    font-size: $font-size-large--button;
-    line-height: $line-height--text;
-    text-align: center;
+@media (max-width: $max-width--small) {
+  .page-footer {
+    &__title {
+      margin-top: 39px;
+      margin-bottom: 40px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .page-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    &__title {
+      margin-top: 45px;
+      margin-right: 112px;
+      margin-left: 60px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__title {
+      margin-top: 45px;
+      margin-right: $margin--reset;
+      margin-left: 60px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
   }
 }

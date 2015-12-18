@@ -14,3 +14,40 @@
     text-align: center;
   }
 }
+
+@media (min-width: 768px) {
+  .search-information {
+    padding-top: $padding--reset;
+    &__title {
+      margin-top: $margin--reset;
+      margin-bottom: 32px;
+      font-size: $font-size-large--title;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+    &__text {
+      margin-bottom: 42px;
+      font-size: $font-size-medium--text;
+      line-height: $line-height-smaller--text;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-information {
+    &__title {
+      margin-top: $margin--reset;
+      margin-bottom: 32px;
+      font-size: $font-size-large--title;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+    &__text {
+      margin-bottom: 48px;
+      font-size: $font-size-medium--text;
+      line-height: $line-height-smaller--text;
+      text-align: center;
+    }
+  }
+}

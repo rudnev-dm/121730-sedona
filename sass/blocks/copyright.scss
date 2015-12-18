@@ -1,17 +1,81 @@
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 23px;
-  &__link {
-    display: block;
-    font-size: $font-size--reset;
+@media (max-width: $max-width--small) {
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 23px;
+    &__link {
+      display: block;
+      font-size: $font-size--reset;
+    }
+    &__link--logo {
+      margin-left: 11px;
+      width: 27px;
+      height: 34px;
+    }
+    &__link--image {
+      width: 27px;
+    }
+    &__link:hover {
+      fill: $main-color--light-blue;
+    }
+    &__link:focus {
+      fill: #b2b2b2;
+    }
   }
-  &__link--logo {
-    margin-left: 11px;
-    width: 27px;
-    height: 34px;
-    background-image: url("../img/page-footer/copyright-logo.png");
-    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 43px;
+    &__link {
+      display: block;
+      font-size: $font-size--reset;
+    }
+    &__link--logo {
+      margin-left: 11px;
+      width: 27px;
+      height: 34px;
+    }
+    &__link--image {
+      width: 27px;
+    }
+    &__link:hover {
+      fill: $main-color--light-blue;
+    }
+    &__link:focus {
+      fill: #b2b2b2;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 43px;
+    margin-right: 44px;
+    &__link {
+      display: block;
+      font-size: $font-size--reset;
+    }
+    &__link--logo {
+      margin-left: 11px;
+      width: 27px;
+      height: 34px;
+    }
+    &__link--image {
+      width: 27px;
+    }
+    &__link:hover {
+      fill: $main-color--light-blue;
+    }
+    &__link:focus {
+      fill: #b2b2b2;
+    }
   }
 }
