@@ -14,6 +14,7 @@
   "homepage": "https://github.com/up-htmlacademy/121730-sedona",
   "dependencies": {
     "autoprefixer": "6.1.x",
+    "copy-dir": "0.0.8",
     "eclint": "1.1.x",
     "fs-extra": "0.26.x",
     "gulp": "3.9.x",
