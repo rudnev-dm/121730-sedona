@@ -36,6 +36,9 @@
     &__item--margin {
       margin: 0;
     }
+    &__item--margin-mobile {
+      margin-bottom: 36px;
+    }
     &__tablet--text {
       display: none;
     }
@@ -45,9 +48,9 @@
     &__block--border:after {
       position: absolute;
       content: "";
-      left: 0;
+      left: -20px;
+      right: -20px;
       bottom: -20px;
-      width: 100%;
       height: 1px;
       background-color: $border-color--form-block;
     }
@@ -82,12 +85,15 @@
     &__title {
       position: relative;
       margin: $margin--reset;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
       width: 100%;
       font-size: $font-size--menu-link;
       font-weight: bold;
       line-height: $line-height--text;
       text-align: center;
+    }
+    &__title--margin--bottom {
+      margin-bottom: 18px;
     }
     &__title--border:before {
       position: absolute;
@@ -99,7 +105,19 @@
       background-color: $border-color--form-block;
     }
     &__title--margin {
-      margin-top: 21px;
+      margin-top: 19px;
+    }
+    &__item--margin-top {
+      margin-top: 31px;
+    }
+    &__item--margin-bottom {
+      margin-bottom: 0px;
+    }
+    &__user-data--margin {
+      margin-bottom: 40px;
+    }
+    &__title--margin-top {
+      margin-top: 35px;
     }
     &__label {
       position: relative;
@@ -136,12 +154,13 @@
     }
     &__input-field[type="text"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 18px;
     }
     &__input-field[type="text"] {
       padding-top: 16px;
-      padding-right: 6.25%;
-      padding-left: 6.25%;
+      padding-right: 22px;
+      padding-left: 22px;
       padding-bottom: 18px;
       width: 100%;
       height: 58px;
@@ -207,7 +226,7 @@
     &__input-field[type="date"] {
       width: 100%;
       height: 58px;
-      padding-left: 6.25%;
+      padding-left: 22px;
       font-size: $font-size--menu-link;
       line-height: $line-height--text;
       font-weight: bold;
@@ -222,7 +241,8 @@
     }
     &__input-field[type="date"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 18px;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -230,7 +250,7 @@
       height: 58px;
       margin-right: 4px;
       margin-left: 4px;
-      padding-left: 4%;
+      padding-left: 22px;
       padding-right: 10%;
       font-size: $font-size--menu-link;
       line-height: $line-height--text;
@@ -242,7 +262,8 @@
     }
     &__input-field[type="number"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 18px;
     }
     &__user-data {
       @include form-user-data--block-model;
@@ -263,7 +284,7 @@
       display: flex;
       flex-direction: column;
       min-width: 60px;
-      margin-right: 4px;
+      margin-right: 7px;
     }
     &__user-data-right {
       display: flex;
@@ -273,6 +294,7 @@
     &__people-number {
       display: block;
       min-width: 66px;
+      margin-bottom: 7px;
       line-height: 26px;
       text-align: center;
     }
@@ -337,7 +359,6 @@
       display: block;
       width: 100%;
       margin: $margin--reset;
-      margin-top: 18px;
       padding: $padding--reset;
       margin-bottom: 45px;
       padding-top: 16.5px;
@@ -452,7 +473,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       margin: $margin--reset;
-      margin-bottom: 8px;
+      margin-bottom: 35px;
       padding: $padding--reset;
       padding-right: 40px;
       padding-left: 40px;
@@ -460,6 +481,9 @@
     }
     &__block--align {
       justify-content: center;
+    }
+    &__block:last-child {
+      margin-bottom: 5px;
     }
     &__item {
       width: 27.5%;
@@ -509,7 +533,7 @@
       position: absolute;
       content: "";
       left: 40px;
-      bottom: -48px;
+      bottom: -74px;
       width: 16.2%;
       height: 1px;
       background-color: $border-color--form-block;
@@ -518,7 +542,7 @@
       position: absolute;
       content: "";
       right: 40px;
-      bottom: -48px;
+      bottom: -74px;
       width: 16.2%;
       height: 1px;
       background-color: $border-color--form-block;
@@ -559,7 +583,7 @@
       position: relative;
       margin: $margin--reset;
       width: 100%;
-      font-size: $font-size--menu-link;
+      font-size: $font-size-large--button;
       font-weight: bold;
       line-height: $line-height--text;
       text-align: center;
@@ -591,6 +615,9 @@
     }
     &__title--wrap {
       word-spacing: 700px;
+    }
+    &__title--margin-top {
+      margin-top: 15px;
     }
     &__label {
       position: relative;
@@ -632,7 +659,8 @@
     }
     &__input-field[type="text"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 18px;
     }
     &__input-field--output {
       display: block;
@@ -651,8 +679,8 @@
     }
     &__input-field[type="text"] {
       padding-top: 15px;
-      padding-right: 6.25%;
-      padding-left: 6.25%;
+      padding-right: 22px;
+      padding-left: 22px;
       padding-bottom: 15px;
       width: 100%;
       height: 58px;
@@ -699,7 +727,7 @@
     &__input-field[type="date"] {
       width: 100%;
       height: 58px;
-      padding-left: 6.25%;
+      padding-left: 22px;
       font-size: $font-size--menu-link;
       line-height: $line-height--text;
       font-weight: bold;
@@ -714,13 +742,14 @@
     }
     &__input-field[type="date"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 18px;
     }
     &__input-field[type="number"] {
       appearance: textfield;
       min-width: 40%;
       height: 58px;
-      padding-left: 4%;
+      padding-left: 22px;
       padding-right: 10%;
       font-size: $font-size--menu-link;
       line-height: $line-height--text;
@@ -732,7 +761,8 @@
     }
     &__input-field[type="number"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 18px;
     }
     &__user-data {
       @include form-user-data--block-model;
@@ -770,6 +800,7 @@
       min-width: 60px;
       line-height: 26px;
       text-align: center;
+      margin-bottom: 7px;
     }
     &__input-field[type="checkbox"] {
       display: none;
@@ -1160,7 +1191,8 @@
     }
     &__input-field[type="text"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding: 15px 6px 15px 18px;
     }
     &__input-field--output {
       display: block;
@@ -1235,14 +1267,15 @@
       border: $display-reset;
     }
     &__input-field--output {
-      outline: 2px solid $input-date--border-color;
+      border: 2px solid $input-date--border-color;
     }
     &__input-field[type="date"]:hover {
       background-color: $border-color--form-block;
     }
     &__input-field[type="date"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 4.8%;
     }
     &__input-field[type="number"] {
       appearance: textfield;
@@ -1262,7 +1295,8 @@
     }
     &__input-field[type="number"]:focus {
       background-color: $main-color--white;
-      outline: 4px solid $input-date--border-color;
+      border: 4px solid $input-date--border-color;
+      padding-left: 2.5%;
     }
     &__user-data {
       @include form-user-data--block-model;

@@ -95,7 +95,7 @@
 
 
 @media (min-width: 768px) {
-  .wrapper-index {
+  .wrapper--shadow {
     box-shadow: none;
   }
   .logo {
@@ -122,7 +122,7 @@
     &__image-middle--form {
       width: 546px;
       margin-top: 104px;
-      margin-bottom: 113px;
+      margin-bottom: 103px;
       fill: $main-color--white;
     }
     &__image-top {
@@ -229,7 +229,7 @@
 
 
 @media (min-width: 1200px) {
-  .wrapper-index {
+  .wrapper--shadow {
     box-shadow: 0px 0px 20px -5px $main-color--black,
                 0px 0px 0px 3600px $main-color--gray;
   }

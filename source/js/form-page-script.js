@@ -41,13 +41,19 @@ function delTraveler() {
   var minus = parent.querySelector(".form__input-button--left");
   var plus = parent.querySelector(".form__input-button--right");
 
-  minus.addEventListener("click", function() {changeNumber(false);});
-  plus.addEventListener("click", function() {changeNumber(true);});
+  minus.addEventListener("click", function() {
+    changeNumber(false);
+  });
+  plus.addEventListener("click", function() {
+    changeNumber(true);
+  });
 
   function changeNumber(operation) {
     var value = Number(input.value);
 
-    if (isNaN(value)) {value = 0;}
+    if (isNaN(value)) {
+      value = 0;
+    }
     if (operation) {
       input.value = value + 1;
     } else {
@@ -80,7 +86,7 @@ function delTraveler() {
       changeNumber(true);
     });
 
-    input.addEventListener("change", function() {
+    input.addEventListener("input", function() {
       if (typeof(Number(input.value)) != 'number' || Number(input.value) > 50) {
         console.log(parseInt(input.value));
         input.value = dataTravelerInput;
