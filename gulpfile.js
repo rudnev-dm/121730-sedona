@@ -7,11 +7,11 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var rename = require("gulp-rename");
 var copyDir = require('copy-dir');
-// var copy = require('copy');
 var jsmin = require('gulp-jsmin');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var minifyCss = require('gulp-minify-css');
+var concat = require('gulp-concat');
 
 gulp.task("css", function() {
   gulp.src("source/sass/style.{sass,scss}")
@@ -24,7 +24,7 @@ gulp.task("css", function() {
     ]))
     .pipe(rename("style.css"))
     .pipe(gulp.dest("build/css"))
-  return gulp.src("build/css/*.css")
+  gulp.src("build/css/*.css")
     .pipe(minifyCss())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
@@ -36,14 +36,25 @@ gulp.task("js", function() {
     .pipe(jsmin())
     .pipe(rename({
       suffix: '.min'}))
-    .pipe(gulp.dest('build/js/'));
+    .pipe(gulp.dest('build/js/'))
   return gulp.src('source/js/vendors/*.js')
-    .pipe(gulp.dest('build/js/vendors/'));
+    .pipe(gulp.dest('build/js/vendors/'))
+});
+
+gulp.task('scripts', function() {
+  gulp.src('source/js/**/*.js')
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('build/js/'))
+    .pipe(gulp.dest("build/js"))
+    .pipe(jsmin())
+    .pipe(rename({
+      suffix: '.min'}))
+    .pipe(gulp.dest('build/js/'))
 });
 
 gulp.task("html", function() {
   gulp.src('source/*.html')
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('build/'))
 });
 
 gulp.task("img", function() {
@@ -67,7 +78,7 @@ gulp.task('watch', function() {
 // =====================================================
 // Start task
 // =====================================================
-gulp.task('start', ['css', 'js', 'html', 'img', 'watch']);
+gulp.task('start', ['css', 'scripts', 'js', 'html', 'img', 'watch']);
 
 // Оставьте эту строку в самом конце файла
 require("./.gosha");
