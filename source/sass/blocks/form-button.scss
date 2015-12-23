@@ -1,0 +1,85 @@
+@media (max-width: $max-width--small) {
+  .form-button {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 75px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: $font-size-large--button;
+    line-height: $line-height--text;
+    font-weight: bold;
+    color: $main-color--white;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: $main-color--light-blue;
+    border: none;
+    &--wrapper {
+      position: relative;
+      text-align: center;
+    }
+  }
+  .form-button:hover {
+    background-color: $main-color--light-blue-hover;
+  }
+  .form-button:active {
+    color: $main-color--light-gray--button-active;
+    background-color: $main-color--light-blue-active;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .form-button {
+    display: inline-block;
+    width: 64.5%;
+    margin-bottom: 88px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: $font-size-large--button;
+    line-height: $line-height--text;
+    font-weight: bold;
+    color: $main-color--white;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: $main-color--light-blue;
+    border: none;
+    &--wrapper {
+      text-align: center;
+    }
+  }
+  .form-button:hover {
+    background-color: $main-color--light-blue-hover;
+  }
+  .form-button:active {
+    color: $main-color--light-gray--button-active;
+    background-color: $main-color--light-blue-active;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-button {
+    display: inline-block;
+    width: 38%;
+    margin-bottom: 88px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: $font-size-large--button;
+    line-height: $line-height--text;
+    font-weight: bold;
+    color: $main-color--white;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: $main-color--light-blue;
+    border: none;
+    &--wrapper {
+      text-align: center;
+    }
+  }
+  .form-button:hover {
+    background-color: $main-color--light-blue-hover;
+  }
+  .form-button:active {
+    color: $main-color--light-gray--button-active;
+    background-color: $main-color--light-blue-active;
+  }
+}

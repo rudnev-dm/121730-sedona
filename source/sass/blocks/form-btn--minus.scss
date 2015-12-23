@@ -1,0 +1,30 @@
+.form__input-button--left {
+  position: relative;
+  min-width: 60px;
+  height: 58px;
+  padding: $padding--reset;
+  background-color: $main-color--gray;
+  // background-image: url("../img/icon-minus.svg");
+  // background-size: 36px auto;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  border: $display-reset;
+}
+.form__input-button--left:hover {
+  background-color: $border-color--form-block;
+}
+.form__input-button--left:active {
+  background-color: $input-radio--bg-color-checked;
+}
+
+.form__input-button--left::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 4px;
+  display: block;
+  top: 27px;
+  left: 20px;
+  background-color: $input-date--border-color;
+
+}
