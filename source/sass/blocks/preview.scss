@@ -63,7 +63,7 @@
   }
   .features-bottom {
     display: flex;
-    margin-bottom: 61px;
+    margin-bottom: 55px;
   }
   .preview {
     position: relative;
@@ -88,7 +88,7 @@
     }
     &__number {
       margin-top: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 19px;
       font-size: $font-size-medium--text;
       line-height: $line-height--small--text;
       text-align: center;
@@ -98,14 +98,16 @@
     }
     &__title {
       margin: $margin--reset;
-      padding-top: 56px;
+      padding-top: 47px;
+      padding-right: 6px;
+      padding-left: 6px;
       font-size: $font-size-large--button;
       letter-spacing: 0;
       line-height: $line-height--text;
       text-align: center;
     }
     &__title--margin {
-      padding-top: 48px;
+      padding-top: 51px;
       padding-right: 6.6%;
       padding-left: 6.6%;
     }
@@ -145,13 +147,16 @@
   }
   .features-bottom {
     display: flex;
-    margin-bottom: 70px;
+    margin-bottom: 81px;
+  }
+  .features-bottom--margin {
+    margin-bottom: 52px;
   }
   .preview {
     position: relative;
     width: 44%;
-    padding-right: 5.7%;
-    padding-left: 5.7%;
+    padding-right: 5.6%;
+    padding-left: 5.6%;
     background-color: #eeeeee;
     &--column-width-one {
       column-width: 156px;
@@ -180,7 +185,9 @@
     }
     &__title {
       margin: $margin--reset;
-      padding-top: 62px;
+      padding-top: 51px;
+      padding-right: 20px;
+      padding-left: 20px;
       font-size: $font-size-large--button;
       letter-spacing: 0;
       line-height: $line-height--text;

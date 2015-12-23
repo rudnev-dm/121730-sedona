@@ -1,31 +1,36 @@
-var dataTravelerInput = 0;
-var card;
-var areaTraveler = document.querySelector(".form__user-data--wrapper");
+(function(){
+  if(document.querySelectorAll('.form__block').item('') != null) {
 
-function addTraveler() {
-  var template = document.querySelector("#traveler-card-template").innerHTML;
-  var html = Mustache.render(template);
-  var div = document.createElement("div");
-  div.classList.add("form__user-data");
-  div.classList.add("form__user-data--margin");
-  div.innerHTML = html;
-  areaTraveler.appendChild(div);
-  dataTravelerInput++;
-  dataTravelerInput = dataTravelerInput + "";
-  div.querySelector(".form__people-counter").innerHTML = dataTravelerInput;
-  card = areaTraveler;
-};
+(function() {
+  var dataTravelerInput = 0;
+  var card;
+  var areaTraveler = document.querySelector(".form__user-data--wrapper");
 
-function delTraveler() {
-  if (!card.childNodes[0]) {
-    return;
+  function addTraveler() {
+    var template = document.querySelector("#traveler-card-template").innerHTML;
+    var html = Mustache.render(template);
+    var div = document.createElement("div");
+    div.classList.add("form__user-data");
+    div.classList.add("form__user-data--margin");
+    div.innerHTML = html;
+    areaTraveler.appendChild(div);
+    dataTravelerInput++;
+    dataTravelerInput = dataTravelerInput + "";
+    div.querySelector(".form__people-counter").innerHTML = dataTravelerInput;
+    card = areaTraveler;
+  };
+
+  function delTraveler() {
+    if (!card.childNodes[0]) {
+      return;
+    }
+    card.removeChild(card.lastChild);
+    dataTravelerInput--;
+    if (dataTravelerInput < 0) {
+      i = 0;
+    }
   }
-  card.removeChild(card.lastChild);
-  dataTravelerInput--;
-  if (dataTravelerInput < 0) {
-    i = 0;
-  }
-}
+})();
 
 
 
@@ -214,3 +219,4 @@ function delTraveler() {
   }
 
 })();
+}})();

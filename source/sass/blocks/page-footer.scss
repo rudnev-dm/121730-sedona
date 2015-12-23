@@ -17,9 +17,18 @@
     align-items: flex-start;
     justify-content: center;
     &__title {
-      margin-top: 45px;
-      margin-right: 112px;
-      margin-left: 60px;
+      margin-top: 50px;
+      margin-right: 114px;
+      margin-left: 22px;
+      font-size: $font-size-large--button;
+      font-weight: bold;
+      line-height: $line-height--text;
+      text-align: center;
+    }
+    &__title--form {
+      margin-top: 50px;
+      margin-right: 114px;
+      margin-left: 22px;
       font-size: $font-size-large--button;
       font-weight: bold;
       line-height: $line-height--text;
@@ -34,9 +43,9 @@
     align-items: flex-start;
     justify-content: space-between;
     &__title {
-      margin-top: 45px;
+      margin-top: 30px;
       margin-right: $margin--reset;
-      margin-left: 60px;
+      margin-left: 127px;
       font-size: $font-size-large--button;
       font-weight: bold;
       line-height: $line-height--text;

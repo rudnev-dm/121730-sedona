@@ -1,5 +1,5 @@
 (function () {
-
+  if(document.querySelectorAll('.form__block').item('') != null) {
   var inputDayNumber = document.getElementById("days-duration");
 
   var duration = document.getElementById("days-duration");
@@ -28,7 +28,8 @@
     var outputDate = document.getElementById("day-departure");
      outputDate.value = moment(inputDate).add(duration.value, "day").format("LL");
      console.log(outputDate.value);
-
   })
-
+}else{
+  return;
+}
 })();

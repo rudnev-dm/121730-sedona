@@ -13,12 +13,12 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .title-preview {
-    padding-right: 6.25%;
-    padding-left: 6.25%;
+    padding-right: 3%;
+    padding-left: 3%;
     text-align: center;
     &__text {
         margin: $margin--reset;
-        margin-bottom: 48px;
+        margin-bottom: 49px;
         padding-right: 105px;
         padding-left: 105px;
         font-size: $font-size-medium--text;
@@ -34,11 +34,20 @@
     padding-right: 6.25%;
     padding-left: 6.25%;
     text-align: center;
-    &__text {
+    &__text--index {
         margin: $margin--reset;
-        margin-bottom: 47px;
-        padding-right: 28.5%;
-        padding-left: 28.5%;
+        margin-bottom: 49px;
+        padding-right: 26%;
+        padding-left: 26%;
+        font-size: $font-size-medium--text;
+        line-height: $line-height--text;
+        text-align: center;
+    }
+    &__text--form {
+        margin: $margin--reset;
+        margin-bottom: 35px;
+        padding-right: 26%;
+        padding-left: 26%;
         font-size: $font-size-medium--text;
         line-height: $line-height--text;
         text-align: center;
