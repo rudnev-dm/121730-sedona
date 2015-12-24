@@ -1,12 +1,3 @@
-@media (min-resolution: 144dpi),
-(min-resolution: 1.5dppx) {
-  .logo{
-    background-image: url("../img/photo-background@2x.jpg");
-    &--mini{
-      background-image: url("../img/photo-background@2x.jpg");
-    }
-  }
-}
 @media (min-width: 320px) and (max-width: 767px) {
 
   .logo {
@@ -15,20 +6,24 @@
     flex-direction: column;
     text-align: center;
     background-image: url("../img/photo-background@1x.jpg");
+    background-color: $main-color--light-blue;
     background-repeat: no-repeat;
     background-size: 768px auto;
     background-position: 50% 0;
     z-index: -5;
+    @include image-2x('../img/photo-background@2x.jpg', 240%, auto);
     &--mini {
       position: relative;
       display: flex;
       flex-direction: column;
       text-align: center;
       background-image: url("../img/photo-background@1x.jpg");
+      background-color: $main-color--light-blue;
       background-repeat: no-repeat;
       background-size: 768px auto;
       background-position: 52% 42%;
       z-index: -5;
+      @include image-2x('../img/photo-background@2x.jpg', 240%, auto);
     }
     &__image-middle--form {
       width: 173px;
@@ -104,20 +99,24 @@
     flex-direction: column;
     text-align: center;
     background-image: url("../img/photo-background@1x.jpg");
+    background-color: $main-color--light-blue;
     background-repeat: no-repeat;
     background-size: 1200px auto;
     background-position: 50% 0;
     z-index: -5;
+    @include image-2x('../img/photo-background@2x.jpg', 100%, auto);
     &--mini {
       position: relative;
       display: flex;
       flex-direction: column;
       text-align: center;
       background-image: url("../img/photo-background@1x.jpg");
+      background-color: $main-color--light-blue;
       background-repeat: no-repeat;
       background-size: 1200px auto;
       background-position: 50% 56%;
       z-index: -5;
+      @include image-2x('../img/photo-background@2x.jpg', 100%, auto);
     }
     &__image-middle--form {
       width: 546px;
@@ -171,20 +170,22 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: url("../img/photo-background@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 1200px auto;
-    background-position: 53% -94px;
+    // background-image: url("../img/photo-background@1x.jpg");
+    // background-color: $main-color--light-blue;
+    // background-repeat: no-repeat;
+    // background-size: 1200px auto;
+    // background-position: 53% -94px;
     z-index: -5;
     &--mini {
       position: relative;
       display: flex;
       flex-direction: column;
       text-align: center;
-      background-image: url("../img/photo-background@1x.jpg");
-      background-repeat: no-repeat;
-      background-size: 1200px auto;
-      background-position: 50% 56%;
+      // background-image: url("../img/photo-background@1x.jpg");
+      // background-color: $main-color--light-blue;
+      // background-repeat: no-repeat;
+      // background-size: 1200px auto;
+      // background-position: 50% 56%;
       z-index: -5;
     }
     &__image-top {
@@ -239,9 +240,11 @@
     flex-direction: column;
     text-align: center;
     background-image: url("../img/photo-background@1x.jpg");
+    background-color: $main-color--light-blue;
     background-repeat: no-repeat;
     background-size: 1200px auto;
     background-position: 50% -84px;
+    @include image-2x('../img/photo-background@2x.jpg', 100%, auto);
     z-index: -5;
     &--mini {
       position: relative;
@@ -249,15 +252,17 @@
       flex-direction: column;
       text-align: center;
       background-image: url("../img/photo-background@1x.jpg");
+      background-color: $main-color--light-blue;
       background-repeat: no-repeat;
       background-size: 1200px auto;
       background-position: 50% 65%;
       z-index: -5;
+      @include image-2x('../img/photo-background@2x.jpg', 100%, auto);
     }
     &__image-middle--form {
       width: 454px;
       margin-top: 104px;
-      margin-bottom: 121px;
+      margin-bottom: 112px;
       fill: $main-color--white;
     }
     &__image-top {
